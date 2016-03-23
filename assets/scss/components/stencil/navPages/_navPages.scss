@@ -12,6 +12,12 @@
 // -----------------------------------------------------------------------------
 
 
+$font-family: 'Lato', sans-serif;
+$red: #d51a3a;
+$normal: 400;
+$bold: 700;
+
+
 //
 // Shared styles for sub page navigation
 // -----------------------------------------------------------------------------
@@ -58,8 +64,16 @@
     &.is-open {
         display: block;
         padding-top: $header-height;
-        z-index: 0;
+        z-index: 9;
     }
+}
+
+.menu-wrap {
+    height: 55px;
+    background: #fff;
+    border-bottom: 5px solid #000;
+    width: calc(100% - 0px);
+    padding: 0px 10px;
 }
 
 //
@@ -67,10 +81,12 @@
 // -----------------------------------------------------------------------------
 
 .navPages {
-    background-color: $navPages-backgroundColor;
+    // background-color: $navPages-backgroundColor;
+    background-color: #eee;
     height: 100%;
     overflow-y: auto;
-    padding: spacing("single");
+    padding: 20px;
+    margin-top:65px;
 
     @include breakpoint("medium") {
         @include grid-row(); // 1
@@ -84,6 +100,7 @@
 
     ul {
         list-style: none;
+        // margin-top: 77px;
     }
 
     .navPage-subMenu-list {
@@ -98,6 +115,10 @@
     }
 }
 
+.navPages-action:hover {
+    color: #000;
+}
+
 .navPages-list {
     margin: 0;
 
@@ -107,18 +128,19 @@
     }
 
     + .navPages-list {
-        border-top: 1px solid $navPages-list--user-borderColor;
+        border-top: 1px solid #000;
         margin-top: spacing("half");
         padding-top: spacing("half");
     }
 }
 
+
 .navPages-action {
     color: stencilColor("navPages-color");
     display: block;
-    font-size: fontSize("smaller");
+    font-size: 16px;
     font-weight: fontWeight("bold");
-    padding: spacing("half") 0;
+    padding: 5px 0;
     text-decoration: none;
     text-transform: uppercase;
 
@@ -138,7 +160,7 @@
     }
 
     &:hover {
-        color: stencilColor("navPages-color-hover");
+        color: #000;
 
         // scss-lint:disable NestingDepth
         svg {
@@ -168,17 +190,29 @@
 
 .navPages-action-moreIcon {
     @include square(8px);
-    margin-left: spacing("quarter");
-    transform: rotate(-90deg);
+    // margin-left: spacing("quarter");
+        height: 15px;
+        width: 14px;
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+        font-style: normal;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 11px;
+        color:#d51a3a;
 
     @include breakpoint("medium") {
         transform: none;
     }
 
     .has-subMenu.is-open & {
-        transform: rotate(0);
+        transform: rotate(-45deg);
+        // margin-top:-3px;
+        color:#bfbfbf;
     }
 }
+
 
 
 // Sub page navigation and children of sub pages
@@ -251,7 +285,7 @@
 }
 
 .navPage-subMenu-action {
-    padding: spacing("half") 0;
+    padding: 5px 0;
 
     @include breakpoint("medium") {
         padding: spacing("half") 0 (spacing("half") + spacing("quarter"));
@@ -327,4 +361,54 @@
             padding: spacing("half") spacing("single");
         }
     }
+}
+
+
+@media only screen and (min-width: 0px) {
+
+    .navPages-item {
+        padding-left: 20px;
+    }
+    .navPages-action.has-subMenu {
+        margin-left: -17px;
+    }
+    .navPages .navPage-subMenu-list{
+        // margin-left:0px;
+        border-left:none;
+        margin: 7px 0px;
+        padding-left: 0px;
+    }
+    .navPages .navPage-subMenu-list > .navPage-subMenu-item > a {
+        font-weight: 400;
+        color: #000;
+        font-family: $font-family;
+        text-transform: capitalize;
+    }
+    .navPages-action.has-subMenu.is-open > i {
+        line-height: 9px;
+    }
+    .navPages-list.navPages-list--user > li > a, .navPages-list.navPages-list--user > li {
+        font-size: 13px;
+        font-weight:700;
+        color:#000;
+    }
+    .navPages-list.navPages-list--user .navPages-action {
+        display: inline-block;
+    }
+    
+}
+@media only screen and (min-width: 480px) {
+    
+}
+@media only screen and (min-width: 768px) {
+    
+}
+@media only screen and (min-width: 992px) {
+    
+}
+@media only screen and (min-width: 1200px) {
+    
+}
+@media only screen and (min-width: 1240px) {
+    
 }

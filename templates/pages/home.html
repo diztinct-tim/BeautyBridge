@@ -1,22 +1,16 @@
 ---
 products:
     new:
-        limit: {{theme_settings.homepage_new_products_count}}
+        limit: 12
     featured:
-        limit: {{theme_settings.homepage_featured_products_count}}
+        limit: 12
     top_sellers:
-        limit: {{theme_settings.homepage_top_products_count}}
-carousel: {{theme_settings.homepage_show_carousel}}
+        limit: 12
 blog:
     recent_posts:
         limit: {{theme_settings.homepage_blog_posts_count}}
 ---
-{{#partial "hero"}}
-    {{#if carousel}}
-        {{> components/carousel}}
-    {{/if}}
-    {{{snippet 'home_content'}}}
-{{/partial}}
+
 
 {{#partial "page"}}
 
@@ -25,17 +19,185 @@ blog:
     {{/each}}
 
 <div class="main full">
-    {{#if products.featured}}
-        {{> components/products/featured products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
-    {{/if}}
 
+     <div class="desktop-slider">
+        <!-- FIRST DESK SLIDE -->
+        <div class="desk-slide-one">
+            <a href="">
+                <!-- <div class="text-box">
+                    <h4>BECCA</h4>
+                    <p>Perfection is yours to define</p>
+                    <span>SHOP NOW</span>
+                </div> -->
+            </a>
+        </div>
+
+        <!-- SECOND DESK SLIDE -->
+        <div class="desk-slide-two">
+            <a href="">
+            </a>
+        </div>
+
+        <!-- THIRD DESK SLIDE -->
+        <div class="desk-slide-three">
+            <a href="">
+            </a>
+        </div>
+
+    </div>
+    <!-- BEGIN DESKTOP SLIDER CSS -->
+    <style>
+        .desk-slide-one{
+            background:url(assets/img/desk-banner.jpg);
+            background-size:100%;
+        }
+        .desk-slide-two{
+            background:url(assets/img/desk-banner.jpg);
+            background-size:100%;
+        }
+        .desk-slide-three{
+            background:url(assets/img/desk-banner.jpg);
+            background-size:100%;
+        }
+    </style>
+    <!-- END DESKTOP SLIDER -->
+
+
+
+
+    <!-- BEGIN MOBILE SLIDER HTML & CSS -->
+    <!-- DESKTOP SLIDER -->
+    <div class="mobile-slider">
+        <!-- FIRST MOBILE SLIDE -->
+        <div class="mobile-slide-one">
+            <a href="">
+                <!-- <div class="text-box">
+                    <h4>BECCA</h4>
+                    <p>Perfection is yours to define</p>
+                    <span>SHOP NOW</span>
+                </div> -->
+            </a>
+        </div>
+
+        <!-- SECOND MOBILE SLIDE -->
+        <div class="mobile-slide-two">
+            <a href="">
+            </a>
+        </div>
+
+        <!-- THIRD MOBILE SLIDE -->
+        <div class="mobile-slide-three">
+            <a href="">
+            </a>
+        </div>
+
+
+
+    </div>
+    <!-- BEGIN MOBILE SLIDER CSS -->
+    <style>
+        .mobile-slide-one{
+            background:url(assets/img/home-mob-banner.jpg) no-repeat;
+            background-size:100%;
+        }
+        .mobile-slide-two{
+            background:url(assets/img/home-mob-banner.jpg) no-repeat;
+            background-size:100%;
+        }
+        .mobile-slide-three{
+            background:url(assets/img/home-mob-banner.jpg) no-repeat;
+            background-size:100%;
+        }
+    </style>
+    <!-- END MOBILE SLIDER -->
+
+
+    <div class="featured-brands">
+        <h4>FEATURED BRANDS</h4>
+        <a class="see-more" href="">SEE MORE</a>
+        <ul>
+            <li>
+                <a href="">
+                    <img src="assets/img/feat-brands1.jpg" alt="">
+                </a>
+            </li><li>
+                <a href="">
+                    <img src="assets/img/feat-brands2.jpg" alt="">
+                </a>
+            </li><li>
+                <a href="">
+                    <img src="assets/img/feat-brands3.jpg" alt="">
+                </a>
+            </li><li>
+                <a href="">
+                    <img src="assets/img/feat-brands4.jpg" alt="">
+                </a>
+            </li><li>
+                <a href="">
+                    <img src="assets/img/feat-brands5.jpg" alt="">
+                </a>
+            </li><li>
+                <a href="">
+                    <img src="assets/img/feat-brands6.jpg" alt="">
+                </a>
+            </li><li>
+                <a href="">
+                    <img src="assets/img/feat-brands7.jpg" alt="">
+                </a>
+            </li><li>
+                <a href="">
+                    <img src="assets/img/feat-brands8.jpg" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="category-banner cf">
+        <div class="banner-one">
+            <a href="">
+                <img src="assets/img/cat-banner1.jpg" alt="">
+                <div class="text">
+                    <h4>Free Samples</h4>
+                    <p>Choose your 3 Free Samples.</p>
+                    <span>BROWSE</span>
+                </div>
+            </a>    
+        </div>
+        <div class="banner-two">
+            <a href="">
+                <img src="assets/img/cat-banner2.jpg" alt="">
+                <div class="text">
+                    <h4>Clearance</h4>
+                    <p>Save up to 80% off retail!</p>
+                    <span>SHOP NOW</span>
+                </div>
+            </a>    
+        </div>
+        <div class="banner-three">
+            <a href="">
+                <img src="assets/img/cat-banner3.jpg" alt="">
+                <div class="text">
+                    <h4>Free BB-Gift</h4>
+                    <p>The best things in life are free.</p>
+                    <span>LEARN MORE</span>
+                </div>
+            </a>    
+        </div>
+    </div>
+
+    
     {{#if products.top_sellers}}
-        {{> components/products/top products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
+        <div class="top-products">
+            {{> components/products/top products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
+        </div>
+    {{/if}}
+    
+    {{#if products.new}}
+        <div class="new-products">
+            {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
+        </div>
     {{/if}}
 
-    {{#if products.new}}
-        {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
-    {{/if}}
 </div>
 {{/partial}}
 {{> layout/base}}

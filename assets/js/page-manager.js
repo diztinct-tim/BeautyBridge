@@ -5,6 +5,20 @@ export default class PageManager {
 
     loaded(next) {
         next();
+
+
+        $(".click-tog-search").on("click", function(){
+            $(this).parent().toggleClass("black-outline")
+            $(this).toggleClass("open-search");
+            $(".mob-tog-search").slideToggle("fast");
+        });
+
+        $(".account-menu-toggle").on("click", function(){
+            $(this).find("ul").slideToggle();
+            $(this).toggleClass("open-menu");
+        })
+
+
     }
 
     after(next) {

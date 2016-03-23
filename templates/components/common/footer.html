@@ -5,66 +5,83 @@
     </div>
 </div>
 {{/if}}
-<footer class="footer" role="contentinfo">
+<footer class="footer cf" role="contentinfo">
     <div class="container">
-        <section class="footer-info">
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
-                <h5 class="footer-info-heading">{{lang 'footer.navigate'}}</h5>
-                <ul class="footer-info-list">
-                    {{#each pages}}
-                    <li>
-                        <a href="{{url}}">{{name}}</a>
-                    </li>
-                    {{/each}}
-                    <li>
-                        <a href="{{urls.sitemap}}">{{lang 'sitemap.page_title'}}</a>
-                    </li>
-                </ul>
-            </article>
 
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-categories">
-                <h5 class="footer-info-heading">{{lang 'footer.categories'}}</h5>
-                <ul class="footer-info-list">
-                    {{#each categories}}
-                        <li>
-                            <a href="{{url}}">{{name}}</a>
-                        </li>
-                    {{/each}}
-                </ul>
-            </article>
 
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-brands">
-                <h5 class="footer-info-heading">{{lang 'footer.brands'}}</h5>
-                <ul class="footer-info-list">
-                    {{#each shop_by_brand}}
-                        <li>
-                            <a href="{{url}}">{{name}}</a>
-                        </li>
-                    {{/each}}
-                    <li><a href="{{urls.brands}}">{{lang 'common.view_all'}}</a></li>
-                </ul>
-            </article>
 
-            <article class="footer-info-col footer-info-col--small" data-section-type="storeInfo">
-                <h5 class="footer-info-heading">{{lang 'footer.info'}}</h5>
-                <address>{{nl2br settings.address}}</address>
-                {{#if settings.phone_number}}
-                    <strong>{{lang 'footer.call_us' phone_number=settings.phone_number}}</strong>
-                {{/if}}
-            </article>
+        <div class="footer-inside-container">
 
-            <article class="footer-info-col" data-section-type="newsletterSubscription">
+            <article class="footer-info-col footer-subscription" data-section-type="newsletterSubscription">
                 {{#if settings.show_newsletter_box}}
                     {{> components/common/subscription-form}}
                 {{/if}}
-                {{> components/common/social-links}}
-                {{> components/common/payment-icons}}
             </article>
-        </section>
-        {{#if theme_settings.show_powered_by}}
-            <div class="footer-copyright">
-                <p class="powered-by">Powered by <a href="http://bigcommerce.com" rel="nofollow">Bigcommerce</a></p>
+
+            <div class="social-icons">
+                <h4>FOLLOW US</h4>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/beautybridge" target="_blank">
+                            <img src="assets/img/facebook.png" alt="facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/beautybridge" target="_blank">
+                            <img src="assets/img/twitter.png" alt="twitter">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.pinterest.com/beautybridge/" target="_blank">
+                            <img src="assets/img/pinterest.png" alt="pinterest">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/beautybridge/" target="_blank">
+                            <img src="assets/img/instagram.png" alt="instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/c/BeautyBridge" target="_blank">
+                            <img src="assets/img/youtube.png" alt="youtube">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/+BeautyBridge/posts" target="_blank">
+                            <img src="assets/img/googleplus.png" alt="googleplus">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://blog.beautybridge.com/" target="_blank">
+                            <img src="assets/img/last-social.png" alt="blog">
+                        </a>
+                    </li>
+                </ul>
             </div>
-        {{/if}}
+
+            <div class="contact-us">
+                <h4>Contact Us</h4>
+                <p><a href="mailto:customercare@beautybridge.com">customercare@beautybridge.com</a> <span class="mob-tab-break"></span>or by phone <a href="tel+8668306161">1-866-830-6161</a></p>
+                <ul>
+                    <li><a href="/about-us/">About</a></li>
+                    <li><a href="/contact-us/">Contact</a></li>
+                    <li><a href="">Policies</a></li>
+                    <li><a href="">Affiliates</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+
+        <div class="copyright">
+            <ul>
+                <li><a href="/about-us/">About Us</a></li>
+                <li><a href="/contact-us/">Customer Care</a></li>
+                <li><a href="">Policies</a></li>
+                <li><a href="">Affiliate Program</a></li>
+            </ul>
+            <p>Copyright © 2016 BeautyBridge<span class="mobile-break"></span><a href="www.diztinct.com/bigcommerce-design.html" target="_blank">Ecommerce Design</a> by Diztinct.com</p>
+        </div>
+        
     </div>
 </footer>

@@ -1,12 +1,12 @@
 {
-  "name": "Cornerstone",
+  "name": "BeautyBridge",
   "version": "1.1.0",
   "meta": {
     "price": 0,
     "documentation_url": "https://stencil.bigcommerce.com/docs/what-is-stencil",
-    "author_name": "Bigcommerce",
-    "author_email": "support@bigcommerce.com",
-    "author_support_url": "https://www.bigcommerce.com/support",
+    "author_name": "Diztinct, Inc.",
+    "author_email": "tim@diztinct.com",
+    "author_support_url": "www.diztinct.com",
     "composed_image": "composed.jpg",
     "features": [
       "fully_responsive",

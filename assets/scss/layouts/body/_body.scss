@@ -16,6 +16,12 @@
     }
 }
 
+.cf{
+    content: "";
+    display: table;
+    clear: both;
+}
+
 
 .page {
     @include grid-row(
@@ -53,4 +59,307 @@
             @include grid-column(9);
         }
     }
+}
+
+
+
+.slick-next, .slick-prev{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.7);
+}
+
+
+
+@media only screen and (min-width: 0px) {
+    .desktop-slider{
+        display:none;
+    }
+    .mobile-slider{
+        display:block;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .slick-slide{
+        padding-bottom:20%;
+        background:no-repeat;
+        cursor:pointer;
+    }
+    .desktop-slider .slick-prev, .desktop-slider .slick-next, .mobile-slider .slick-prev, .mobile-slider .slick-next{
+        display:none !important;
+    }
+    .featured-brands h4 {
+        font-family: $font-family;
+        text-align: center;
+        font-weight:$bold;
+        font-size:20px;
+    }
+    .featured-brands {
+        margin:60px 20px 30px;
+    }
+    .featured-brands ul{
+        margin:0px 0px 20px 0px;
+        list-style:none;
+        text-align:center;
+    }
+    .featured-brands ul > li{
+        display:inline-block;
+        width: 50%;
+        padding:10px;
+        border-bottom:1px solid #ccc;
+    }
+    .featured-brands ul > li:nth-child(n+7){
+        border-bottom:none;
+    }
+    .featured-brands ul > li:nth-child(odd){
+        border-right:1px solid #ccc;
+    }
+    .featured-brands ul > li > a > img{
+        opacity:.5;
+        transition: opacity .25s ease-in-out;
+        -moz-transition: opacity .25s ease-in-out;
+        -webkit-transition: opacity .25s ease-in-out;
+    }
+    .featured-brands ul > li:hover > a > img{
+        opacity:1;
+    }
+    .banner-one, .banner-two, .banner-three{
+        position:relative;
+    }
+    .banner-one > a > img, .banner-two > a > img, .banner-three > a > img{
+        max-width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+    .banner-one .text, .banner-two .text, .banner-three .text{
+        position: absolute;
+        z-index: 99;
+        color: #fff;
+        top: 20px;
+        width: calc(100% - 20px);
+        left: 10px;
+        text-align: center;
+        font-family:$font-family;
+        height: 120px;
+        top: calc(50% - 60px);
+    }
+    .banner-one .text h4, .banner-two .text h4, .banner-three .text h4{
+        color:#fff;
+        font-weight:$bold;
+        text-transform: uppercase;
+        font-size:30px;
+        margin-bottom: 0px;
+        margin-top:0px;
+    }
+    .banner-one .text span, .banner-two .text span, .banner-three .text span{
+        border: 1px solid #fff;
+        padding: 10px 15px 8px;
+        transition: all 0.25s ease;
+    }
+    .banner-one .text span:hover, .banner-two .text span:hover, .banner-three .text span:hover{
+        background:#fff;
+        color:#000;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    .productCarousel-slide.slick-slide {
+        padding-bottom: 0px;
+    }
+    .page-heading{
+        font-family: $font-family;
+        font-size: 20px;
+        font-weight: $bold;
+        text-transform: uppercase;
+    }
+    .new-products h2.page-heading, .top-products h2.page-heading {
+        margin-bottom: 0px;
+        color:#000;
+        letter-spacing: 1px;
+    }
+    .top-products{
+        border-top:5px solid #000;
+    }
+    .new-products{
+        border-top:5px solid #000;
+        border-bottom:5px solid #000;
+    }
+    .category-banner {
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    .new-products {
+        padding: 20px 20px;
+    }
+    .new-products .card-title, .top-products .card-title{
+        font-size:13px;
+        font-family:$font-family;
+        color:#000;
+        line-height: 16px;
+        height: 50px;
+        min-height: 50px;
+        max-height: 50px;
+        overflow:hidden;
+    }
+    .card-body .card-text {
+        color: #000;
+        font-family:$font-family;
+        font-weight: $bold;
+        font-size: 16px;
+    }
+    .card-title > a {
+        color: #000;
+    }
+    .card-title > a:hover {
+        color: #000;
+        text-decoration: underline;
+    }
+    .new-products .slick-dots, .top-products .slick-dots{
+        display:none !important;
+    }
+    .new-products .productCarousel, .top-products .productCarousel{
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .slick-prev::before, .slick-next::before {
+        color:#000;
+        height: 30px;
+        width: 15px;
+    }
+    .slick-next, .slick-prev{
+        top:40%;
+    }
+    .slick-dots li button{
+        border: 2px solid #000;
+    }
+    .slick-dots li.slick-active button::before {
+        background:#000;
+        color:#000;
+    }
+    .slick-dots li button::before{
+        color:#000;
+        left: -2px;
+        top: -2px;
+    }
+    .slick-dots li button:hover::before, .slick-dots li button:focus::before {
+        opacity: 1;
+    }
+    .see-more{
+        color: #666;
+        font-size: 13px;
+        text-align: center;
+        display: block;
+        margin-bottom:20px;
+    }
+    .slick-next, .slick-prev, .slick-next:hover, .slick-prev:hover{
+        background:transparent;
+    }
+    div.body{
+        margin-bottom:0px !important;
+    }
+
+
+
+
+    
+
+
+
+    
+}
+@media only screen and (min-width: 480px) {
+    
+    .card-body {
+        text-align: center;
+    }
+
+}
+@media only screen and (min-width: 768px) {
+
+    .desktop-slider{
+        display:block;
+    }
+    .mobile-slider{
+        display:none;
+    }
+    .slick-slide{
+        padding-bottom:10%;
+        background:no-repeat;
+    }
+    .slick-prev, .slick-next{
+        display:block !important;
+    }
+    .container {
+        padding: 0px !important;
+    }
+    .featured-brands ul > li{
+        width:25%;
+        border-right: 1px solid #ccc;
+        padding:15px;
+    }
+    .featured-brands ul > li:nth-child(4), .featured-brands ul > li:nth-child(8) {
+        border-right:none;
+    }
+    .featured-brands ul > li:nth-child(n+5){
+        border-bottom:none;
+    }
+    .featured-brands {
+        margin: 60px 0px 60px;
+        border-top: 5px solid #000;
+        position: relative;
+    }
+    .featured-brands h4{
+        padding-left:20px;
+        text-align:left;
+        font-size:24px;
+        margin-top: 20px !important;
+    }
+    .see-more{
+        position:absolute;
+        top:25px;
+        color:#000 !important;
+        font-size:16px;
+        right:20px;
+    }
+    .banner-one, .banner-two, .banner-three{
+        width:33.3333%;
+        float:left;
+    }
+    .category-banner {
+        margin-bottom: 60px;
+    }
+    .new-products, .top-products {
+        position: relative;
+    }
+    .new-products h2.page-heading, .top-products h2.page-heading{
+        text-align:left;
+        font-size:24px;
+    }
+    .productCarousel-slide {
+        padding: 20px 20px 0px !important;
+    }
+    .new-products .card-title, .top-products .card-title {
+        font-size: 16px;
+        line-height: 18px;
+        height: 35px;
+        min-height: 35px;
+        max-height: 35px;
+        overflow:hidden;
+    }
+    .mobile-break{
+        display:inline;
+    }
+
+    
+}
+@media only screen and (min-width: 992px) {
+    
+}
+@media only screen and (min-width: 1200px) {
+    
+}
+@media only screen and (min-width: 1240px) {
+    
 }

@@ -1,27 +1,79 @@
-{{#if banners.top}}
+
 <div class="banners" data-banner-location="top">
-    <div class="banner">
-        {{{limit banners.top 1}}}
-    </div>
-</div>
-{{/if}}
-<header class="header" role="banner">
-    <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
-        <span class="mobileMenu-toggleIcon">Toggle menu</span>
-    </a>
 
-    {{> components/common/navigation}}
-
-    {{#if template_file '===' 'pages/home'}}
-        <h1 class="header-logo">
-            {{> components/common/store-logo}}
-        </h1>
-    {{else}}
-        <div class="header-logo">
-            {{> components/common/store-logo}}
+    {{#if banners.top}}
+        <div class="banner">
+            {{{limit banners.top 1}}}
         </div>
     {{/if}}
 
+    <ul class="top-head cf">
+
+        <li><a href="/contact-us/">HELP</a></li>
+        <li class="account-menu-toggle">ACCOUNT
+            <ul>
+                <li><a href="">MY ACCOUNT<a></li>
+                <li><a href="">MY ACCOUNT<a></li>
+                <li><a href="">MY ACCOUNT<a></li>
+            </ul>
+        </li>
+        <li class="navUser-item navUser-item--cart">
+            <a
+                class="navUser-action"
+                data-cart-preview
+                data-dropdown="cart-preview-dropdown"
+                data-options="align:right"
+                href="{{urls.cart}}">
+                <span class="navUser-item-cartLabel">{{lang 'common.cart'}}</span> <span class="countPill{{#if cart.items}} countPill--positive{{/if}} cart-quantity">({{cart.quantity}})</span>
+            </a>
+
+            <div class="dropdown-menu" id="cart-preview-dropdown" data-dropdown-content aria-hidden="true"></div>
+        </li>
+
+    </ul>
+        
+
+</div>
+
+
+<header class="header" role="banner">
+
+    <h1 class="header-logo">
+        <a href="/">
+            <img src="assets/img/beautybridge-logo.png" alt="">
+        </a>
+    </h1>
+
+    <div class="menu-wrap">
+
+        <span class="center-wrap mob-menu">
+            <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
+                <span class="mobileMenu-toggleIcon">Toggle menu</span><span class="menu-txt">MENU</span>
+            </a>
+        </span>
+
+        <span class="center-wrap search-wrap">
+            <div class="click-tog-search">
+                 SEARCH
+            </div>
+                       
+        </span>
+
+        <span class="center-wrap cart-wrap">
+            <a href="/cart.php">
+                <div class="cart-num">
+                    <span class="mob-cart-num">{{cart.quantity}}</span><img src="assets/img/mob-cart.jpg" alt=""> BAG
+                </div>
+            </a>
+        </span>
+
+    </div>
+
+    <div class="navPages-quickSearch mob-tog-search">
+        {{> components/common/search-box}}
+    </div> 
+
+    {{> components/common/navigation}}    
 
     <div class="navPages-container" id="menu" data-menu>
         {{> components/common/navigation-menu}}

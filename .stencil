@@ -1,0 +1,12 @@
+{
+  "normalStoreUrl": "http://beautybridge.mybigcommerce.com/?ctk=h3FRRVG4SWAtXPa0NmFbx%2BLz5B4oluzrVcmvKWxiTtHcvgLFfg",
+  "port": 3000,
+  "username": "BB-Stencil",
+  "token": "71e2dfa82cb956655852a104accf7cbccf887adf",
+  "customLayouts": {
+    "products": {},
+    "search": {},
+    "brands": {},
+    "categories": {}
+  }
+}
