@@ -227,6 +227,7 @@ html, body{
     .copyright {
         padding: 10px 20px;
         text-align: center;
+        width: 100%;
     }
     .copyright, .copyright a {
         color:#000;
@@ -252,6 +253,9 @@ html, body{
         margin-bottom:0px;
     }
     .mob-tab-break{
+        display:block;
+    }
+    .mobile-break{
         display:block;
     }
 
@@ -322,7 +326,7 @@ html, body{
         text-decoration: none;
         padding:10px;
         color:#000;
-        font-size:16px;
+        font-size:14px;
         font-weight:$bold;
     }
     .mobile-break{
@@ -352,12 +356,41 @@ html, body{
 
 
 
+
 }
 
 @media only screen and (min-width: 992px) {
+
+    .copyright > ul {
+        float: left;
+    }
+    .copyright ul li a{
+        font-size:14px;
+    }
+    .copyright > p {
+        float: right;
+        padding: 13px 0px 7px;
+    }
+    .social-icons ul li {
+        margin: 0px 2% !important;
+    }
+    .footer {
+        padding-top: 0px;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+    .slick-next, .slick-prev, .slick-next:hover, .slick-prev:hover {
+        background: rgba(0,0,0,.1);
+    }
+
+
     
 }
 @media only screen and (min-width: 1200px) {
+
+    .footer-subscription .button.button--primary.form-prefixPostfix-button--postfix {
+        margin-left: 0px;
+    }
     
 }
 @media only screen and (min-width: 1240px) {

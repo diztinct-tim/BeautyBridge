@@ -1,38 +1,39 @@
 
-<div class="banners" data-banner-location="top">
+<div class="banners cf" data-banner-location="top">
+    <div class="banner-container">
 
-    {{#if banners.top}}
-        <div class="banner">
-            {{{limit banners.top 1}}}
-        </div>
-    {{/if}}
+        {{#if banners.top}}
+            <div class="banner">
+                {{{limit banners.top 1}}}
+            </div>
+        {{/if}}
 
-    <ul class="top-head cf">
+        <ul class="top-head cf">
 
-        <li><a href="/contact-us/">HELP</a></li>
-        <li class="account-menu-toggle">ACCOUNT
-            <ul>
-                <li><a href="">MY ACCOUNT<a></li>
-                <li><a href="">MY ACCOUNT<a></li>
-                <li><a href="">MY ACCOUNT<a></li>
-            </ul>
-        </li>
-        <li class="navUser-item navUser-item--cart">
-            <a
-                class="navUser-action"
-                data-cart-preview
-                data-dropdown="cart-preview-dropdown"
-                data-options="align:right"
-                href="{{urls.cart}}">
-                <span class="navUser-item-cartLabel">{{lang 'common.cart'}}</span> <span class="countPill{{#if cart.items}} countPill--positive{{/if}} cart-quantity">({{cart.quantity}})</span>
-            </a>
+            <li><a href="/contact-us/">HELP</a></li>
+            <li class="account-menu-toggle">ACCOUNT
+                <ul>
+                    <li><a href="">My Account<a></li>
+                    <li><a href="">My Account<a></li>
+                    <li><a href="">My Account<a></li>
+                </ul>
+            </li>
+            <li class="navUser-item navUser-item--cart">
+                <a
+                    class="navUser-action"
+                    data-cart-preview
+                    data-dropdown="cart-preview-dropdown"
+                    data-options="align:right"
+                    href="{{urls.cart}}">
+                    <span class="navUser-item-cartLabel">BAG</span> <span class="countPill countPill--positive cart-quantity">({{cart.quantity}})</span>
+                </a>
 
-            <div class="dropdown-menu" id="cart-preview-dropdown" data-dropdown-content aria-hidden="true"></div>
-        </li>
+                <div class="dropdown-menu" id="cart-preview-dropdown" data-dropdown-content aria-hidden="true"></div>
+            </li>
 
-    </ul>
-        
+        </ul>
 
+    </div>
 </div>
 
 

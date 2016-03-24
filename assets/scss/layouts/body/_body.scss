@@ -18,8 +18,8 @@
 
 .cf{
     content: "";
-    display: table;
-    clear: both;
+    display: table !important;
+    clear: both !important;
 }
 
 
@@ -259,6 +259,20 @@
     div.body{
         margin-bottom:0px !important;
     }
+    .category-banner{
+        max-width: 100%;
+        display: block;
+    }
+    .desktop-slider .slick-dots {
+        bottom: 20px;
+    }
+    .desktop-slider .slick-dots li button {
+        border: 2px solid #fff;
+    }
+    .desktop-slider .slick-dots li.slick-active button::before {
+        background: #fff;
+        color: #fff;
+    }
 
 
 
@@ -355,6 +369,48 @@
     
 }
 @media only screen and (min-width: 992px) {
+
+    .banner-one .text h4, .banner-two .text h4, .banner-three .text h4{
+        font-size:40px;
+    }
+    .banner-one .text p, .banner-two .text p, .banner-three .text p{
+        font-size:20px;
+    }
+    .banner-one .text span, .banner-two .text span, .banner-three .text span {
+        border:2px solid #fff;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .new-products .productCarousel, .top-products .productCarousel {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .new-products .productCarousel .slick-prev, .top-products .productCarousel .slick-prev{
+        left:10px;
+    }
+    .new-products .productCarousel .slick-next, .top-products .productCarousel .slick-next{
+        right:10px;
+    }
+    .slick-prev::before, .slick-next::before {
+        color: #000;
+        height: 30px;
+        width: 30px;
+        background-size: 12px 22px;
+    }
+    .slick-next::before {
+        background-position: 6px 0px;
+    }
+    .slick-prev::before {
+        background-position: 2px -1px;
+    }
+    .footer-subscription .form-field {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+
+
     
 }
 @media only screen and (min-width: 1200px) {
