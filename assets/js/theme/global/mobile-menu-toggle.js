@@ -80,7 +80,7 @@ export class MobileMenuToggle {
     }
 
     show() {
-        this.$body.addClass('has-activeNavPages');
+        // this.$body.addClass('has-activeNavPages');
 
         this.$toggle
             .addClass('is-open')
@@ -90,12 +90,12 @@ export class MobileMenuToggle {
             .addClass('is-open')
             .attr('aria-hidden', false);
 
-        this.$header.addClass('is-open');
+        // this.$header.addClass('is-open');
         this.$scrollView.scrollTop(0);
     }
 
     hide() {
-        this.$body.removeClass('has-activeNavPages');
+        // this.$body.removeClass('has-activeNavPages');
 
         this.$toggle
             .removeClass('is-open')
@@ -105,7 +105,7 @@ export class MobileMenuToggle {
             .removeClass('is-open')
             .attr('aria-hidden', true);
 
-        this.$header.removeClass('is-open');
+        // this.$header.removeClass('is-open');
     }
 
     // Private

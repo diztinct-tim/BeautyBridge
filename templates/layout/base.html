@@ -20,8 +20,19 @@
         {{inject 'urls' urls}}
         {{{snippet 'htmlhead'}}}
         <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/content/diztinct.css" type='text/css'>
+        <link rel="stylesheet" href="/content/responsive-tables.css" type='text/css'>
     </head>
     <body>
+
+        <!-- ************************************** -->
+        <!-- ********* START PD TAGGING *********** -->
+        <!-- ************************************** -->
+        <div id="pdPageTag" style="display:none" productId="{{product.id}}" productCode="{{product.sku}}" categoryId="{{category.id}}"></div>
+        <!-- *************************************** -->
+        <!-- ********* FINISH PD TAGGING *********** -->
+        <!-- *************************************** -->
+
         {{{snippet 'header'}}}
         <div class="icons-svg-sprite">{{> components/common/icons/icon-defs }}</div>
 
@@ -32,6 +43,28 @@
         {{> components/common/header }}
         {{> components/common/body }}
         {{> components/common/footer }}
+
+        <!-- ********************************************************** -->
+        <!-- ********* START PD INTEGRATION SCRIPT *********** -->
+        <!-- ********************************************************** -->
+        <script type="text/javascript">
+        function pdInit() {
+            var cb = (new Date()).getTime();
+            var scriptUrl = "https://beautybridge.practicaldatacore.com/mod_bigcommerce/services/pageScript.php";
+            scriptUrl += "?cb=" + cb;
+            scriptUrl += "&productId=" + encodeURIComponent(document.getElementById("pdPageTag").getAttribute("productId"));
+            scriptUrl += "&productCode=" + encodeURIComponent(document.getElementById("pdPageTag").getAttribute("productCode"));
+            scriptUrl += "&categoryId=" + encodeURIComponent(document.getElementById("pdPageTag").getAttribute("categoryId"));
+            var scriptElement=document.createElement('script');
+            scriptElement.setAttribute("type","text/javascript");
+            scriptElement.setAttribute("src", scriptUrl);
+            document.body.appendChild(scriptElement);
+        };
+        pdInit();
+        </script>
+        <!-- *********************************************************** -->
+        <!-- ********* FINISH PD INTEGRATION SCRIPT *********** -->
+        <!-- *********************************************************** -->
 
         <script>
             function startupApp(stencilBootstrap) {
@@ -54,5 +87,8 @@
         {{/if}}
         {{{footer.scripts}}}
         {{{snippet 'footer'}}}
+        <script src="/content/diztinct.js"></script>
+        <script src="/content/responsive-tables.js"></script>
+
     </body>
 </html>

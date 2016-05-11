@@ -25,8 +25,9 @@
 
 .productView-images {
     @include grid-column(12);
-    padding-left: spacing("base");
-    padding-right: spacing("base");
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom:20px;
 
     @include breakpoint("medium") {
         width: grid-calc(6, $total-columns);
@@ -35,8 +36,8 @@
 
 .productView-details {
     @include grid-column(12);
-    padding-left: spacing("base");
-    padding-right: spacing("base");
+    padding-left: 0px;
+    padding-right: 0px;
 
     @include breakpoint("medium") {
         clear: right;

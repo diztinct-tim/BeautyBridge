@@ -20,10 +20,27 @@ export default function () {
             .toggleClass('countPill--positive', quantity > 0);
     });
 
+
+    $("body").on("click", ".click-tog-search", function(){
+        $(this).parent().toggleClass("black-outline");
+        $(this).toggleClass("open-search");
+        $(".mob-tog-search").slideToggle("fast");
+    });
+
+    $(".account-menu-toggle").on("click", function(){
+        $(this).find("ul").slideToggle();
+        $(this).toggleClass("open-menu");
+    })
+
+
     $cart.on('click', (event) => {
         const options = {
             template: 'common/cart-preview',
         };
+
+
+
+
 
         // Redirect to full cart page
         //

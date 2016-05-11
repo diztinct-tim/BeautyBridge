@@ -1,6 +1,6 @@
 {
-  "name": "BeautyBridge",
-  "version": "1.1.0",
+  "name": "BeautyBridge-v1.0.3",
+  "version": "1.0.3",
   "meta": {
     "price": 0,
     "documentation_url": "https://stencil.bigcommerce.com/docs/what-is-stencil",
@@ -58,9 +58,9 @@
     "productpage_reviews_count": 9,
     "productpage_related_products_count": 10,
     "productpage_similar_by_views_count": 10,
-    "categorypage_products_per_page": 12,
-    "brandpage_products_per_page": 12,
-    "searchpage_products_per_page": 12,
+    "categorypage_products_per_page": 24,
+    "brandpage_products_per_page": 24,
+    "searchpage_products_per_page": 24,
     "show_product_quick_view": true,
     "show_powered_by": true,
     "show_accept_amex": false,

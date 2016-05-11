@@ -81,12 +81,11 @@ $bold: 700;
 // -----------------------------------------------------------------------------
 
 .navPages {
-    // background-color: $navPages-backgroundColor;
     background-color: #eee;
     height: 100%;
     overflow-y: auto;
     padding: 20px;
-    margin-top:65px;
+    margin-top:60px;
 
     @include breakpoint("medium") {
         @include grid-row(); // 1
@@ -372,10 +371,12 @@ $bold: 700;
     .navPages-action.has-subMenu {
         margin-left: -17px;
     }
+    .navPage-subMenu-action.navPages-action.has-subMenu{
+        margin-left: 0px;
+    }
     .navPages .navPage-subMenu-list{
-        // margin-left:0px;
         border-left:none;
-        margin: 7px 0px;
+        margin: 7px 0px 7px 20px;
         padding-left: 0px;
     }
     .navPages .navPage-subMenu-list > .navPage-subMenu-item > a {
@@ -395,6 +396,26 @@ $bold: 700;
     .navPages-list.navPages-list--user .navPages-action {
         display: inline-block;
     }
+    .navPage-subMenu-action.navPages-action.has-subMenu{
+        position:relative;
+    }
+    .navPage-subMenu-action.navPages-action.has-subMenu > i {
+        position: absolute;
+        left: -20px;
+        top: 11px;
+    }
+    .navPage-childList{
+        border-left: none;
+        padding-left: 0px;
+    }
+    .navPage-childList-action.navPages-action {
+        font-weight: 400;
+        color: #000;
+        font-family: "Lato", sans-serif;
+        text-transform: capitalize;
+        font-size:16px;
+    }
+
     
 }
 @media only screen and (min-width: 480px) {

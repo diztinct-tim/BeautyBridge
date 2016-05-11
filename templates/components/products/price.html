@@ -1,4 +1,4 @@
-{{#if price.with_tax}}
+<!-- {{#if price.with_tax}}
     <div class="price-section price-section--withTax" {{#if schema_org}}itemprop="offers" itemscope itemtype="http://schema.org/Offer"{{/if}}>
         {{#if price.rrp_with_tax}}
             <span data-product-rrp-with-tax class="price price--rrp">{{price.rrp_with_tax.formatted}}</span>
@@ -10,11 +10,9 @@
     </div>
 {{/if}}
 
-{{#if price.without_tax}}
+{{#if price.without_tax}} -->
     <div class="price-section price-section--withoutTax {{#if price.with_tax}}price-section--minor{{/if}}"  {{#if schema_org}}itemprop="offers" itemscope itemtype="http://schema.org/Offer"{{/if}}>
-        {{#if price.rrp_without_tax}}
-            <span data-product-rrp-without-tax class="price price--rrp">{{price.rrp_without_tax.formatted}}</span>
-        {{/if}}
+
         {{#if schema_org}}
             <meta itemprop="price" content="{{price.without_tax.value}}">
             <meta itemprop="priceCurrency" content="{{currency_selector.active_currency_code}}">
@@ -23,10 +21,14 @@
         {{#if price.with_tax}}
             <abbr title="{{lang 'products.excluding_tax'}}">{{lang 'products.price_without_tax' tax_label=price.tax_label}}</abbr>
         {{/if}}
+        {{#if price.rrp_without_tax}}
+            <span data-product-rrp-without-tax class="price price--rrp retail">{{price.rrp_without_tax.formatted}}</span>
+        {{/if}}
+        <span class="percent-off"></span>
     </div>
-{{/if}}
+<!-- {{/if}} -->
 
-{{#if page_type '===' 'product'}}
+<!-- {{#if page_type '===' 'product'}}
     {{#if price.saved}}
         <div class="price-section price-section--saving">
             <span class="price">
@@ -35,3 +37,4 @@
         </div>
     {{/if}}
 {{/if}}
+ -->

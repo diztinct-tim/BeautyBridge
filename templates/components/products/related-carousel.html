@@ -1,0 +1,9 @@
+<section>
+    <ul class="cf">
+    {{#each products}}
+    <li>
+        {{> components/products/related-card theme_settings=../theme_settings}}
+    </li>
+    {{/each}}
+    </ul>
+</section>

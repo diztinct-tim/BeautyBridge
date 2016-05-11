@@ -24,6 +24,126 @@ export default class Product extends PageManager {
             }
         });
 
+
+
+
+        $("body").addClass("ProductPage");
+
+
+        function percentOff(){
+            var sale = $(".productView .price.price--withoutTax").text().replace("$","");
+            var retail = $(".productView .price.retail").text().replace("$","").trim();
+
+            if( retail !== "" ){
+              var percentRaw = (retail - sale) / retail * 100;
+              var percentOff = Math.round(percentRaw);
+              if( percentOff >= 10 ){
+                $("span.percent-off").text('Save '+ percentOff + '%');
+              } else {
+                $(".productView .price.retail").hide();
+                $("span.percent-off").hide()
+              }
+            }
+
+        }
+        percentOff();
+
+
+        if( $(".productView-thumbnails > li").length > 3 ){
+            makeSlideThumbnails();
+        }
+
+
+        function makeSlideThumbnails(){
+
+            $('.productView-thumbnails').addClass("thumb-slider");
+
+            $('.productView-thumbnails').slick({
+              dots: false,
+              infinite: false,
+              // speed: 300,
+              slidesToShow: 6,
+              slidesToScroll: 6,
+              responsive: [
+                {
+                  breakpoint: 992,
+                  settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 5,
+                    infinite: false,
+                    dots: false
+                  }
+                },
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    infinite: false,
+                    dots: false
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    infinite: false,
+                    dots: false
+                  }
+                }
+              ]
+            });
+
+        }
+
+        $(".product-details-accordion > ul > li > h3").on("click", function(){
+          $(this).parent("li").toggleClass('open-accordion');
+        })
+
+        if( $(window).width() < 900 ){
+          $(".product-details-accordion > ul > li:first-child").removeClass("open-accordion");
+
+        }
+
+        $('.related-products > ul.productGrid').slick({
+              dots: false,
+              infinite: false,
+              // speed: 300,
+              slidesToShow: 5,
+              slidesToScroll: 5,
+              responsive: [
+                {
+                  breakpoint: 992,
+                  settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    infinite: false,
+                    dots: false
+                  }
+                },
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                    infinite: false,
+                    dots: false
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: false,
+                    dots: false
+                  }
+                }
+              ]
+            });
+
+
         next();
     }
 

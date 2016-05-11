@@ -18,7 +18,7 @@ html, body{
 
 .footer {
     background-color: $footer-background;
-    border-top: container("border");
+    border-top: 1px solid #000;
     padding: 15px 0 0px;
     max-width: 1440px;
     width: 100%;
@@ -171,6 +171,7 @@ html, body{
         list-style:none;
         text-align:center;
         margin-left:0px;
+        // margin-bottom: 0px;
     }
     .social-icons ul li{
         display:inline-block;
@@ -217,7 +218,7 @@ html, body{
     }
     .contact-us ul li{
         display:inline-block;
-        padding:0px 8px;
+        padding:0px 5px;
     }
     .contact-us ul li a{
         color:#000;
@@ -350,6 +351,9 @@ html, body{
     .mobile-break::before {
         content: "|";
         margin: 0px 2px;
+    }
+    .navPages-action.has-subMenu {
+        margin-left: 0px;
     }
 
 

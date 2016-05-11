@@ -71,7 +71,7 @@ body {
     display:none;
     width: 100%;
     position: absolute;
-    top: 116px;
+    top: 115px;
     padding: 0 20px;
     background: #333;
     border: none;
@@ -85,7 +85,7 @@ body {
     color: #fff !important;
 }
 .body{
-    margin-top:16px !important;
+    margin-top:15px !important;
 }
 .has-activeNavPages .body{
     margin-top:0px !important;
@@ -122,16 +122,20 @@ body {
 
 
 .header-logo {
-
     font-size: 0;
-    padding: 15px 0px 5px;
+    // padding: 15px 0px 5px;
     text-align: center;
     background: #fff;
     margin: 0px;
+    display:table;
+    width:100%;
+    height:60px;
 
     @include breakpoint("small") { // 4
-        margin-left: remCalc($header-toggle-width * 1.5);
-        margin-right: remCalc($header-toggle-width * 1.5);
+        // margin-left: remCalc($header-toggle-width * 1.5);
+        // margin-right: remCalc($header-toggle-width * 1.5);
+        margin-left: 0;
+        margin-right: 0;
     }
 
     @include breakpoint("medium") {
@@ -158,6 +162,10 @@ body {
         text-decoration: none;
         width: 100%;
         z-index: zIndex("low");
+
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
 
         // scss-lint:disable NestingDepth
         @include breakpoint("medium") {
@@ -406,10 +414,13 @@ body {
     }
     h1.header-logo > a > img {
         width: calc(100% - 40px);
-        max-width:440px;
+        max-width:340px;
     }
     .top-head.cf {
         display:none !important;
+    }
+    .socialLinks-item.socialLinks-item--google_plusone {
+        display: none;
     }
 
     
@@ -450,7 +461,7 @@ body {
         margin-left: 0px;
         margin-bottom: 0px;
         position: absolute;
-        top: 0px;
+        top: -1px;
         right: 0px;
         text-align: right;
     }
@@ -461,11 +472,12 @@ body {
     }
     .account-menu-toggle > ul > li > a{
         text-decoration:none;
+        font-size: 14px;
     }
     .account-menu-toggle > ul{
         display:none;
         position: absolute;
-        background: #666;
+        background: #333;
         padding: 10px;
         z-index: 99999999;
         margin-left:0px;
@@ -571,7 +583,6 @@ body {
         margin-top: 8px;
     }
     .navPages-quickSearch.mob-tog-search{
-        // top:165px;
         top: 107px;
     }
     .click-tog-search{
@@ -627,7 +638,7 @@ body {
     #menu > nav.navPages > ul.navPages-list > li.navPages-item{
 
     }
-    #menu > nav.navPages > ul.navPages-list > li.navPages-item:nth-child(n+8) {
+    #menu > nav.navPages > ul.navPages-list > li.navPages-item:nth-child(n+7) {
         display: none;
     }
     .body {
@@ -651,6 +662,25 @@ body {
         max-width: 1280px;
         margin: 0 auto;
     }
+    h1.header-logo > a > img {
+        max-width: 440px;
+    }
+    .header-logo {
+        height: 26px;
+    }
+    .breadcrumb{
+        font-size:11px;
+        font-weight:$bold;
+    }
+    .ProductPage .breadcrumbs {
+        text-align: center;
+    }
+    ul.navPages-list > .navPages-item:hover {
+        background: #000 !important;
+    }
+    ul.navPages-list > .navPages-item:hover > a{
+        color: #fff !important;
+    }
     
 
      
@@ -662,7 +692,7 @@ body {
 }
 @media only screen and (min-width: 992px) {
     
-    #menu > nav.navPages > ul.navPages-list > li.navPages-item:nth-child(n+8) {
+    #menu > nav.navPages > ul.navPages-list > li.navPages-item:nth-child(n+7) {
         display: inline-block;
     }
     .banner-container {
@@ -682,6 +712,8 @@ body {
 
 }
 @media only screen and (min-width: 1200px) {
+
+
     
 }
 

@@ -1,10 +1,41 @@
-<h2 class="page-heading">{{lang 'products.top' }}</h2>
-<a class="see-more" href="">SEE MORE</a>
-<ul class="productGrid productGrid--maxCol{{ columns }}" data-product-type="top_sellers">
-    {{#each products}}
-        <li class="product">
-            {{>components/products/card theme_settings=../theme_settings}}
-        </li>
-    {{/each}}
-</ul>
 
+<h2 class="page-heading">Best Sellers</h2>
+<a class="see-more" href="">SEE MORE</a>
+<section class="productCarousel"
+    data-slick='{
+        "dots": true,
+        "infinite": false,
+        "mobileFirst": true,
+        "slidesToShow": 2,
+        "slidesToScroll": 2,
+        "responsive": [
+            {
+                "breakpoint": 1260,
+                "settings": {
+                    "slidesToScroll": 3,
+                    "slidesToShow": {{ columns }}
+                }
+            },
+            {
+                "breakpoint": 800,
+                "settings": {
+                    "slidesToScroll": 3,
+                    "slidesToShow": 4
+                }
+            },
+            {
+                "breakpoint": 550,
+                "settings": {
+                    "slidesToScroll": 3,
+                    "slidesToShow": 3
+                }
+            }
+        ]
+    }'
+>
+    {{#each products}}
+    <div class="productCarousel-slide">
+        {{> components/products/card theme_settings=../theme_settings}}
+    </div>
+    {{/each}}
+</section>

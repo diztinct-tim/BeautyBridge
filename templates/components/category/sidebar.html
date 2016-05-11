@@ -1,7 +1,8 @@
 <nav>
     {{#if category.subcategories}}
-    <div class="sidebarBlock">
-        <h5 class="sidebarBlock-heading">{{category.name}}</h5>
+    <div class="sidebarBlock sub-cat-list">
+        <!-- <h5 class="sidebarBlock-heading">{{category.name}}</h5> -->
+        <h5>Sub Categories</h5>
         <ul class="navList">
             {{#each category.subcategories}}
             <li class="navList-item">

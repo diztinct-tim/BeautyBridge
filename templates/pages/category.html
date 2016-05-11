@@ -21,14 +21,19 @@ category:
     <img src="{{getImage category.image 'zoom'}}">
 {{/if}}
 <h1 class="page-heading">{{category.name}}</h1>
-{{{category.description}}}
+<!-- {{{category.description}}} -->
 {{{snippet 'categories'}}}
-<div class="page">
+<div class="page category-page">
     <aside class="page-sidebar" id="faceted-search-container">
         {{> components/category/sidebar}}
     </aside>
 
     <main class="page-content" id="product-listing-container">
+        
+        <div class="admin-input-area">
+            {{{category.description}}}
+        </div>
+
         {{#if category.products}}
             {{> components/category/product-listing}}
         {{else}}

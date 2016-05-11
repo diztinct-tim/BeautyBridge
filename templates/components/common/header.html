@@ -2,19 +2,28 @@
 <div class="banners cf" data-banner-location="top">
     <div class="banner-container">
 
-        {{#if banners.top}}
+<!--         {{#if banners.top}}
             <div class="banner">
                 {{{limit banners.top 1}}}
             </div>
-        {{/if}}
+        {{/if}} -->
+        <div class="banner">
+            <p>Winter End Sale 20% Off! Code: WINTER20 - Free Shipping Over $49</p>
+        </div>
 
         <ul class="top-head cf">
 
+            <li class="hide-tablet"><a href="/">REWARDS</a></li>
             <li><a href="/contact-us/">HELP</a></li>
             <li class="account-menu-toggle">ACCOUNT
                 <ul>
                     <li><a href="">My Account<a></li>
-                    <li><a href="">My Account<a></li>
+                    <li class="hide-desktop"><a href="">Rewards<a></li>
+                    {{#if customer}}
+                        <li><a href="{{urls.auth.logout}}">Logout</a></li>
+                    {{else}}
+                        <li class=""><a href="/login.php">Login</a> / <a href="/account.php">Register</a></li>
+                    {{/if}}
                     <li><a href="">My Account<a></li>
                 </ul>
             </li>
@@ -41,7 +50,8 @@
 
     <h1 class="header-logo">
         <a href="/">
-            <img src="assets/img/beautybridge-logo.png" alt="">
+            <!-- <img src="assets/img/beautybridge-logo.png" alt=""> -->
+            <img src="{{cdn "webdav:img/beautybridge-logo.png"}}" alt="">
         </a>
     </h1>
 
@@ -63,7 +73,7 @@
         <span class="center-wrap cart-wrap">
             <a href="/cart.php">
                 <div class="cart-num">
-                    <span class="mob-cart-num">{{cart.quantity}}</span><img src="assets/img/mob-cart.jpg" alt=""> BAG
+                    <span class="mob-cart-num">{{cart.quantity}}</span><!-- <img src="assets/img/mob-cart.jpg" alt=""> --><img src="{{cdn "webdav:img/mob-cart.jpg"}}" alt=""> BAG
                 </div>
             </a>
         </span>

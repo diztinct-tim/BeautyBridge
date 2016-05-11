@@ -1,7 +1,7 @@
 <fieldset class="form-fieldset actionBar-section">
-    <span class="special-sort">SORT BY</span>
-    <div class="form-field desk-only">
+    <div class="form-field">
         <select class="form-select form-select--small" name="sort" id="sort">
+            <option selected="true" disabled="disabled">SORT BY</option> 
             <option value="featured" {{#if sort '==' 'featured'}}selected{{/if}}>{{lang 'common.sorter.featured'}}</option>
             <option value="newest" {{#if sort '==' 'newest'}}selected{{/if}}>{{lang 'common.sorter.newest'}}</option>
             <option value="bestselling" {{#if sort '==' 'bestselling'}}selected{{/if}}>{{lang 'common.sorter.top_sellers'}}</option>

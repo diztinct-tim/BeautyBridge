@@ -15,3 +15,5 @@ export default class Home extends PageManager {}
 	  autoplaySpeed: 8000,
 	  mobileFirst: true,
 	});
+
+	$("body").addClass("home");
