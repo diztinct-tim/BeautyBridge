@@ -46,7 +46,7 @@
             <h1 class="productView-title ProductPageHeading" {{#if schema}}itemprop="name"{{/if}}>{{product.title}}</h1>
 
 
-            <!-- PRACTIVAL DATA REVIEWS -->
+            <!-- PRACTICAL DATA REVIEWS -->
             <div class="pdProductReviewStarsSummary" productId="{{product.id}}"></div>
 
 
@@ -90,6 +90,7 @@
                     <dt class="productView-info-name">{{name}}:</dt>
                     <dd class="productView-info-value">{{{value}}}</dd>
                 {{/each}}
+
             </dl>
         </div>
     </section>
@@ -168,7 +169,7 @@
                     </div>
 
                     <div class="form-action atc-btn">
-                        <input id="form-action-addToCart" data-wait-message="ADDING TO BAG" class="button button--primary" type="submit"
+                        <input id="form-action-addToCart" data-wait-message="ADD TO BAG" class="button button--primary" type="submit"
                                value="ADD TO BAG">
                     </div>
 
@@ -230,8 +231,15 @@
 
     </div>
 
+<!--     <p>{{product.id}}</p>
+    <p>{{product.sku}}</p> -->
+
     <div class="pp-olapic">
-         <div id="olapic_specific_widget"></div><script type="text/javascript" src="https://photorankstatics-a.akamaihd.net/81b03e40475846d5883661ff57b34ece/static/frontend/latest/build.min.js"  data-olapic="olapic_specific_widget" data-instance="18f576354e5290e12f0f8dd380532314" data-apikey="c8d32af7a5848379872b931655c849bffa25d283a9d4b300435aa1dfd8aa18f1" async="async"></script>
+        <!-- <div id="olapic_specific_widget"></div><script type="text/javascript" src="https://photorankstatics-a.akamaihd.net/81b03e40475846d5883661ff57b34ece/static/frontend/latest/build.min.js"  data-olapic="olapic_specific_widget" data-instance="18f576354e5290e12f0f8dd380532314" data-apikey="c8d32af7a5848379872b931655c849bffa25d283a9d4b300435aa1dfd8aa18f1" async="async"></script> -->
+
+         <div id="olapic_specific_widget"></div><script type="text/javascript" src="https://photorankstatics-a.akamaihd.net/81b03e40475846d5883661ff57b34ece/static/frontend/latest/build.min.js"  data-olapic="olapic_specific_widget" data-instance="c66def06ecf3ac32ba9934303df6cab3" data-apikey="c8d32af7a5848379872b931655c849bffa25d283a9d4b300435aa1dfd8aa18f1" data-tags="{{product.sku}}" async="async"></script>
+         
+        <!-- Please place the dynamic variable for you product unique id into the 'data-tags' attribute in our javascript -->
     </div>
 
 

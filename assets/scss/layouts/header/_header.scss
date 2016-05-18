@@ -64,8 +64,12 @@ body {
     top: 6px;
     margin-right:5px;
 }
-.click-tog-search.open-search:before{
-    background: url("../../assets/img/mob-x.jpg");
+.click-tog-search.open-search::before {
+    background: url("../../assets/img/black-x.jpg");
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    top: 8px;
+    left: 2px;
 }
 .navPages-quickSearch.mob-tog-search {
     display:none;
@@ -422,14 +426,192 @@ body {
     .socialLinks-item.socialLinks-item--google_plusone {
         display: none;
     }
+    .desk-nav{
+        display:none;
+    }
+    #menu.is-open > .navPages{
+        padding:0px;
+    }
+    div.info-links{
+        background:#333333;
+    }
+    div.info-links a.navPages-action, div.info-links li {
+        padding: 5px 0px !important;
+        color: #fff;
+    }
+    .dl-menuwrapper ul.dl-submenu li.dl-back > a{
+        color:#d51a3a;
+        font-size:16px;
+        font-weight:700;
+    }
+    li.dl-back > a:after{
+        position: absolute;
+        content:"";
+        display:inline-block;
+        background:url('../../assets/img/red-left-arrow.jpg');
+        background-repeat:no-repeat;
+        background-size:8px 14px;
+        height:17px;
+        width:8px;
+        right: auto;
+        left:20px;
+        top:17px;
+    }
+    .dl-menuwrapper li > a:not(:only-child):after{
+
+    }
+    .dl-menuwrapper > .dl-menu.dl-menuopen > li > a:after, .dl-menuwrapper .dl-menu.dl-menuopen li > a.has-children:after {
+        position:absolute;
+        content:"";
+        display:inline-block;
+        background:url('../../assets/img/black-right-arrow.jpg');
+        background-repeat:no-repeat;
+        background-size:8px 14px;
+        height:17px;
+        width:8px;
+        right: auto;
+        left:20px;
+        top:17px;
+    }
+    .dl-menuwrapper li.dl-back:after {
+        left: 20px;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    .info-links > .navPages-list.navPages-list--user > li{
+        color:#fff;
+    }
+    div.info-links > ul > li {
+        border-bottom: none;
+        color:#fff;
+    }
+    div.info-links > ul{
+        padding:25px 40px;
+    }
+    .dl-submenu{
+        margin-left:0px;
+    }
+    .mobile-nav > nav.navPages {
+        background: transparent;
+        border-bottom:none;
+        box-shadow:none;
+    }
+    .dl-menu ul li a{
+        text-decoration: none;
+    }
+    .dl-submenu {
+        background: #fff;
+    }
+    div.info-links > ul > .navPages-item {
+        display: block !important;
+    }
+    .mobile-nav > .navPages{
+        margin-top: 56px;
+    }
+    .dl-menuwrapper ul.dl-submenu li a{
+        font-weight: 400;
+    }
+    div.med-up.info-links {
+        display:none;
+    }
+    #dl-menu > ul {
+        background: #fff !important;
+    }
+    body.menu-open > div.body {
+        display:none !important;
+    }
+    .dl-subviewopen .cat-name:after{
+        font-size:0px;
+        background:transparent !important;
+    }
+    .parent-cat-name {
+        position: absolute;
+        top: 14px;
+        font-size: 16px;
+        color: #000;
+        left: 100px;
+        border-left: 1px solid #666;
+        padding-left: 15px;
+        text-transform: uppercase;
+    }
+    .no-touch .dl-menuwrapper .info-linksli a:hover {
+        background: #fff;
+    }
+    .dl-menuwrapper li a {
+        text-decoration: none;
+    }
+    .dl-menuwrapper li {
+        border-bottom:1px solid #ddd;
+    }
+    .no-touch .dl-menuwrapper li a:hover {
+        background: rgba(255,248,213,0.1);
+    }
+    span.parent-cat-name{
+        position: absolute;
+        top: 5px;
+        z-index: 99999;
+        color: #000;
+        display: block !important;
+        left: 100px;
+        font-weight: 400;
+        border-left: 1px solid #666;
+        margin: 8px 0px;
+        padding: 0px 0px 0px 20px
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
 }
 @media only screen and (min-width: 480px) {
+
+
+    ul.dl-menu > div.info-links{
+        display:none;
+    }
+    .left-column.cf{
+        width: 33.3333%;
+        float: left;
+        height: 1000px;
+        position: absolute;
+        z-index: 99999;
+    }
     
+    div.med-up.info-links {
+        display: block;
+        height:100%;
+    }
+    .main-clearfix > .column {
+        width: 66.6666% !important;
+        float: right !important;
+        position: absolute !important;
+        right: 0px;
+    }
+
+
+
+
+
 }
 @media only screen and (min-width: 768px) {
-    
+
+    .desk-nav{
+        display:block;
+    }
+    .mobile-nav{
+        display:none;
+    }
     .navPages {
         background: #fff;
     }
@@ -615,15 +797,17 @@ body {
         width: 28px;   
     }
     .click-tog-search.open-search:hover:before{
-        background: url("../../assets/img/mob-x.jpg") no-repeat center center;
-        background-size: 28px 28px;
-        height: 28px;
-        width: 28px; 
+        background: url("../../assets/img/black-x.jpg") no-repeat center center;
+        background-size: 24px 24px;
+        height: 24px;
+        width: 24px; 
     }
     .click-tog-search.open-search::before {
-        background-size: 28px 28px;
-        height: 28px;
-        width: 28px;
+        background-size: 24px 24px;
+        height: 24px;
+        width: 24px;
+        top: 17px;
+        left: 17px;
     }
     .click-tog-search{
         height:60px;
@@ -645,7 +829,7 @@ body {
         margin-top: 7px !important;
     }
     .navPages-action {
-        padding: 10px 15px;
+        padding: 10px 20px;
     }
     .icon.navPages-action-moreIcon {
         display: none;
@@ -681,6 +865,59 @@ body {
     ul.navPages-list > .navPages-item:hover > a{
         color: #fff !important;
     }
+    .desk-nav li.navPages-item:hover > div.mega-menu, .desk-nav li.navPages-item:hover > div.mega-menu > ul {
+        display: block !important;
+        display: inline-block !important;
+        position: static;
+    }
+    .desk-nav li.navPages-item:hover > div.mega-menu{
+        border-top:5px solid #000;
+        position:absolute;
+        width:100%;
+        top:45px;
+        left:0px;
+        background:#fff;
+        box-shadow:2px 0px 10px rgba(0,0,0,0.4);
+        padding:10px;
+        z-index:9999999 !important;
+    }
+    div.mega-menu > .navPage-subMenu {
+        width: 25%;
+        float:left;
+        background:#fff;
+        z-index:9999999 !important;
+    }
+    .mega-menu > .navPage-subMenu > li > a{
+        display: block !important;
+        font-size:14px;
+        font-family:$font-family;
+        font-weight:400;
+        color:#000;
+        text-decoration:none !important;
+    }
+    .mega-menu > .navPage-subMenu > li > a.view-all{
+        font-weight:700 !important;
+    }
+    .mega-menu > .navPage-subMenu > li > a:hover{
+        text-decoration:underline !important;
+    }
+    .mega-menu > .navPage-subMenu > li.list-heading{
+        display:block !important;
+        font-size:18px !important;
+        font-family:$font-family;
+        font-weight:$bold;
+        color:#000;
+        padding-bottom: 10px;
+    }
+    .mega-menu > .navPage-subMenu > li.navPage-subMenu-item{
+        width:100%;
+        display:block;
+        padding-left:0px !important;
+        padding:4px 0px !important;
+    }
+    .navPages-item > a.navPages-action {
+        padding: 12px 15px 8px;
+    }
     
 
      
@@ -690,6 +927,20 @@ body {
 
 
 }
+
+
+@media only screen and (min-width: 850px) {
+
+    .desk-nav li.navPages-item:hover > div.mega-menu{
+        padding:20px;
+    }
+    .navPages-action {
+        padding: 10px 25px;
+    }
+
+}
+
+
 @media only screen and (min-width: 992px) {
     
     #menu > nav.navPages > ul.navPages-list > li.navPages-item:nth-child(n+7) {
@@ -707,10 +958,26 @@ body {
     h1.header-logo > a > img {
         width: 100%;
     }
+    .navPages-item > a.navPages-action {
+        padding: 12px 30px 8px;
+        letter-spacing:1px;
+    }
 
 
 
 }
+
+
+@media only screen and (min-width: 1050px) {
+
+    .navPages-item > a.navPages-action{
+        padding: 12px 40px 8px;
+    }
+    
+}
+
+
+
 @media only screen and (min-width: 1200px) {
 
 

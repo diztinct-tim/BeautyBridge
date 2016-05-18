@@ -1,18 +1,9 @@
-
 <div class="banners cf" data-banner-location="top">
     <div class="banner-container">
-
-<!--         {{#if banners.top}}
-            <div class="banner">
-                {{{limit banners.top 1}}}
-            </div>
-        {{/if}} -->
         <div class="banner">
             <p>Winter End Sale 20% Off! Code: WINTER20 - Free Shipping Over $49</p>
         </div>
-
         <ul class="top-head cf">
-
             <li class="hide-tablet"><a href="/">REWARDS</a></li>
             <li><a href="/contact-us/">HELP</a></li>
             <li class="account-menu-toggle">ACCOUNT
@@ -36,12 +27,9 @@
                     href="{{urls.cart}}">
                     <span class="navUser-item-cartLabel">BAG</span> <span class="countPill countPill--positive cart-quantity">({{cart.quantity}})</span>
                 </a>
-
                 <div class="dropdown-menu" id="cart-preview-dropdown" data-dropdown-content aria-hidden="true"></div>
             </li>
-
         </ul>
-
     </div>
 </div>
 
@@ -57,7 +45,7 @@
 
     <div class="menu-wrap">
 
-        <span class="center-wrap mob-menu">
+        <span class="center-wrap mob-menu dl-trigger">
             <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
                 <span class="mobileMenu-toggleIcon">Toggle menu</span><span class="menu-txt">MENU</span>
             </a>
@@ -86,8 +74,12 @@
 
     {{> components/common/navigation}}    
 
-    <div class="navPages-container" id="menu" data-menu>
+    <div class="navPages-container mobile-nav" id="menu" data-menu>
         {{> components/common/navigation-menu}}
+    </div>
+
+    <div class="navPages-container desk-nav" id="menu" data-menu>
+        {{> components/common/desk-navigation-menu}}
     </div>
 
 </header>

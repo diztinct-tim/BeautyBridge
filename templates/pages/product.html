@@ -40,7 +40,7 @@ product:
         {{product.warranty}}
     </div>
 
-    {{ customer.recently_viewed_products }}
+    <!-- {{ customer.recently_viewed_products }}
 
     {{#if customer}}
 
@@ -77,21 +77,21 @@ product:
             </ul>
         </section>
 
-    {{else}}
+    {{else}} -->
                     
-        <div class="related-products">
-            <h4>Related Products</h4>
-            <!-- {{> components/products/related-carousel products=products.related_products columns=5}} -->
-            <ul class="productGrid">
-                 {{#each product.related_products}}
-                    <li>
-                        {{> components/products/related-card theme_settings=../theme_settings}}
-                    </li>
-                {{/each}}
-            </ul>
-        </div>
+    <div class="related-products">
+        <h4>Related Products</h4>
+        <!-- {{> components/products/related-carousel products=products.related_products columns=5}} -->
+        <ul class="productGrid">
+             {{#each product.related_products}}
+                <li>
+                    {{> components/products/related-card theme_settings=../theme_settings}}
+                </li>
+            {{/each}}
+        </ul>
+    </div>
 
-    {{/if}}
+    <!-- {{/if}} -->
    
 {{/partial}}
 {{> layout/base}}

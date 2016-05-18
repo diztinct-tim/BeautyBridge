@@ -3,6 +3,17 @@ import CatalogPage from './catalog';
 import $ from 'jquery';
 import FacetedSearch from './common/faceted-search';
 
+$(function(){
+
+    function moveSeoText(){
+        $(".category-description").detach().appendTo(".seo-txt");
+        // .append(textDesc);
+    }
+    moveSeoText();
+
+})
+
+
 export default class Category extends CatalogPage {
     loaded() {
         if ($('#facetedSearch').length > 0) {

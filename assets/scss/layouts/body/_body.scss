@@ -371,14 +371,16 @@ h1, h2, h3, h4, h5, h6{
     }
     #faceted-search-container .actionBar-section .form-select {
         color: #000;
-        text-align: center;
+        text-align: left;
         letter-spacing: 1px;
-        font-size:14px;
+        font-size: 14px;
         width: calc(100% - 0px);
-        padding-left:0px;
-        padding-right:0px;
-        background-image:none;
-        text-align-last: center;
+        padding-left: calc(50% - 34px);
+        padding-right: 0px;
+        background-image: none;
+        height: 29px;
+        padding-top: 2px;
+        padding-bottom: 0px;
     }
     #faceted-search-container .actionBar-section {
         float: none;
@@ -626,7 +628,7 @@ h1, h2, h3, h4, h5, h6{
         margin: 0 auto;
     }
     .productView-thumbnails.thumb-slider {
-        padding: 0px 19px;
+        padding: 0px 15px;
     }
     .productView-images .slick-next{
         top:60%;
@@ -719,7 +721,7 @@ h1, h2, h3, h4, h5, h6{
         text-transform: uppercase !important;
         display: inline-block !important;
         text-align: left;
-        width: 50px;
+        width: 115px;
         margin-right: 5px;
         font-size: 14px;
         text-transform: capitalize !important;
@@ -765,7 +767,7 @@ h1, h2, h3, h4, h5, h6{
     }
     .productView-options div.form-field > select {
         text-align:left;
-        width: calc(100% - 60px);
+        width: calc(100% - 120px);
         display: inline-block;
         max-width: 400px;
     }

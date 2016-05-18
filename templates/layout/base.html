@@ -22,6 +22,10 @@
         <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="/content/diztinct.css" type='text/css'>
         <link rel="stylesheet" href="/content/responsive-tables.css" type='text/css'>
+
+        <!-- MULTI LEVEL MENU CSS -->
+        <link rel="stylesheet" href="/content/dl-menu-default.css" type='text/css'>
+        <link rel="stylesheet" href="/content/dl-menu-component.css" type='text/css'>
     </head>
     <body>
 
@@ -32,6 +36,16 @@
         <!-- *************************************** -->
         <!-- ********* FINISH PD TAGGING *********** -->
         <!-- *************************************** -->
+
+        <!-- Google Tag Manager -->
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PX4B69"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PX4B69');</script>
+        <!-- End Google Tag Manager -->
 
         {{{snippet 'header'}}}
         <div class="icons-svg-sprite">{{> components/common/icons/icon-defs }}</div>
@@ -89,6 +103,19 @@
         {{{snippet 'footer'}}}
         <script src="/content/diztinct.js"></script>
         <script src="/content/responsive-tables.js"></script>
+
+        
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+        <script src="/content/modernizr.custom.js"></script>
+        <script src="/content/jquery.dlmenu.js"></script>
+        <script>
+            $(function() {
+                $( '#dl-menu' ).dlmenu({
+                    animationClasses : { classin : 'dl-animate-in-2', classout : 'dl-animate-out-2' }
+                });
+            });
+        </script>
+        
 
     </body>
 </html>
