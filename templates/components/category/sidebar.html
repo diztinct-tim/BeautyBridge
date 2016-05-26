@@ -2,7 +2,7 @@
     {{#if category.subcategories}}
     <div class="sidebarBlock sub-cat-list">
         <!-- <h5 class="sidebarBlock-heading">{{category.name}}</h5> -->
-        <h5>Sub Categories</h5>
+        <h5>Categories</h5>
         <ul class="navList">
             {{#each category.subcategories}}
             <li class="navList-item">
@@ -19,3 +19,12 @@
         {{> components/category/shop-by-price shop_by_price=category.shop_by_price category_url=category.url}}
     {{/if}}
 </nav>
+
+
+ 
+<!-- 
+    <ul class="brandGrid">
+        {{#each brands}}
+            <li class="brand"><a href="{{url}}">{{name}}</a></li>
+        {{/each}}
+    </ul> -->

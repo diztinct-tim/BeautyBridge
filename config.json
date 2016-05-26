@@ -1,6 +1,6 @@
 {
-  "name": "BeautyBridge-v1.0.4",
-  "version": "1.0.4",
+  "name": "BeautyBridge-v1.0.6",
+  "version": "1.0.6",
   "meta": {
     "price": 0,
     "documentation_url": "https://stencil.bigcommerce.com/docs/what-is-stencil",
@@ -87,8 +87,8 @@
         "height": 250
       },
       "zoom": {
-        "width": 1280,
-        "height": 1280
+        "width": 500,
+        "height": 659
       }
     },
     "default_image_brand": "/assets/img/BrandDefault.gif",

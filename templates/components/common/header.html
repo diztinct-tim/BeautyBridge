@@ -5,17 +5,17 @@
         </div>
         <ul class="top-head cf">
             <li class="hide-tablet"><a href="/">REWARDS</a></li>
-            <li><a href="/contact-us/">HELP</a></li>
-            <li class="account-menu-toggle">ACCOUNT
+            <li><a href="/customer-care/">HELP</a></li>
+            <li class="account-menu-toggle"><span>ACCOUNT</span>
                 <ul>
-                    <li><a href="">My Account<a></li>
+                    <li><a href="/account.php">My Account<a></li>
                     <li class="hide-desktop"><a href="">Rewards<a></li>
                     {{#if customer}}
                         <li><a href="{{urls.auth.logout}}">Logout</a></li>
                     {{else}}
                         <li class=""><a href="/login.php">Login</a> / <a href="/account.php">Register</a></li>
                     {{/if}}
-                    <li><a href="">My Account<a></li>
+                    <li><a href="/account.php">My Account<a></li>
                 </ul>
             </li>
             <li class="navUser-item navUser-item--cart">
@@ -38,7 +38,6 @@
 
     <h1 class="header-logo">
         <a href="/">
-            <!-- <img src="assets/img/beautybridge-logo.png" alt=""> -->
             <img src="{{cdn "webdav:img/beautybridge-logo.png"}}" alt="">
         </a>
     </h1>
@@ -61,7 +60,7 @@
         <span class="center-wrap cart-wrap">
             <a href="/cart.php">
                 <div class="cart-num">
-                    <span class="mob-cart-num">{{cart.quantity}}</span><!-- <img src="assets/img/mob-cart.jpg" alt=""> --><img src="{{cdn "webdav:img/mob-cart.jpg"}}" alt=""> BAG
+                    <span class="mob-cart-num">{{cart.quantity}}</span><img src="{{cdn "webdav:img/mob-cart.jpg"}}" alt=""> BAG
                 </div>
             </a>
         </span>
@@ -80,6 +79,12 @@
 
     <div class="navPages-container desk-nav" id="menu" data-menu>
         {{> components/common/desk-navigation-menu}}
+    </div>
+
+    <div class="mobile-band">
+        <div class="banner">
+            <p>Winter End Sale 20% Off! Code: WINTER20 - Free Shipping Over $49</p>
+        </div>
     </div>
 
 </header>

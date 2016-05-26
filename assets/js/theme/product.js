@@ -24,11 +24,7 @@ export default class Product extends PageManager {
             }
         });
 
-
-
-
         $("body").addClass("ProductPage");
-
 
         function percentOff(){
             var sale = $(".productView .price.price--withoutTax").text().replace("$","");
@@ -48,10 +44,20 @@ export default class Product extends PageManager {
         }
         percentOff();
 
+        function isFreeShip(){
+          var price = $(".productView-product .price.price--withoutTax").text().replace("$","").split(".")[0];
+          if( price > "49" ){
+            $(".free-shipping-over").text("THIS ITEM SHIPS FREE!");
+          }
+        };
+        isFreeShip();
 
+      
+        // $(".productView-title.ProductPageHeading").text().split("- ")[1];
+        
         if( $(".productView-thumbnails > li").length > 3 ){
             makeSlideThumbnails();
-        }
+        };
 
 
         function makeSlideThumbnails(){
@@ -68,8 +74,8 @@ export default class Product extends PageManager {
                 {
                   breakpoint: 992,
                   settings: {
-                    slidesToShow: 5,
-                    slidesToScroll: 5,
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
                     infinite: false,
                     dots: false
                   }
@@ -103,45 +109,69 @@ export default class Product extends PageManager {
 
         if( $(window).width() < 900 ){
           $(".product-details-accordion > ul > li:first-child").removeClass("open-accordion");
-
         }
 
         $('.related-products > ul.productGrid').slick({
-              dots: false,
-              infinite: false,
-              // speed: 300,
-              slidesToShow: 5,
-              slidesToScroll: 5,
-              responsive: [
-                {
-                  breakpoint: 992,
-                  settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 4,
-                    infinite: false,
-                    dots: false
-                  }
-                },
-                {
-                  breakpoint: 768,
-                  settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 2,
-                    infinite: false,
-                    dots: false
-                  }
-                },
-                {
-                  breakpoint: 480,
-                  settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    infinite: false,
-                    dots: false
-                  }
+            dots: true,
+            infinite: false,
+            // speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [
+              {
+                breakpoint: 992,
+                settings: {
+                  slidesToShow: 4,
+                  slidesToScroll: 1,
+                  infinite: false,
+                  dots: false
                 }
-              ]
-            });
+              },
+              {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 2,
+                  infinite: false,
+                  dots: false
+                }
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2,
+                  infinite: false,
+                  dots: false
+                }
+              }
+            ]
+          });
+
+        // CREATE AT A GLANCE AREA
+        // function createAtAGlanceArea(){
+        //     if ( $("li.productView-info-name.product.type").length ){
+        //       $("<h5>Product Type:</h5>").insertBefore("li.productView-info-name.product.type:first");
+        //       $("li.productView-info-name.product.type").hide();
+        //     }
+        //     if ( $("li.productView-info-name.concern").length ){
+        //       $("<h5>Concern:</h5>").insertBefore("li.productView-info-name.concern:first");
+        //       $("li.productView-info-name.concern").hide();
+        //     }
+        // }
+        // createAtAGlanceArea();
+
+        // CREATE HOW TO USE AREA
+        // function createAdditionalTabs(){
+        //     $("li.description span > p > strong").each(function(){
+        //       var className = $(this).text().replace(":","");
+        //       $(this).parent("p").addClass(className);
+        //     });
+        //     $("p.Directions").clone().appendTo('.how-to-use > span > p');
+        //     $("p.Ingredients").clone().appendTo('.ingredients > span > p');
+        // }
+        // createAdditionalTabs();
+
 
 
         next();

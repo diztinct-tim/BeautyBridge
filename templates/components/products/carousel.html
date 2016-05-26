@@ -30,9 +30,12 @@
         ]
     }'
 >
+
     {{#each products}}
     <div class="productCarousel-slide">
-        {{> components/products/card theme_settings=../theme_settings}}
+        
+        {{> components/products/best-top-related-card theme_settings=../theme_settings}}
     </div>
     {{/each}}
+
 </section>

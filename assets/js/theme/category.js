@@ -6,10 +6,32 @@ import FacetedSearch from './common/faceted-search';
 $(function(){
 
     function moveSeoText(){
+        // $(".admin-input-area").detach().appendTo(".seo-txt");
         $(".category-description").detach().appendTo(".seo-txt");
-        // .append(textDesc);
     }
     moveSeoText();
+
+    function moveCatImage(){
+        $(".admin-input-area.cat-has-img > .cat-img").detach().insertBefore(".category-description");
+    }
+    moveCatImage();
+
+    // IF ITS BRANDS CATEGORY, CHANGE THE VIEW
+    var url = window.location.href;
+    if ( url == "http://localhost:3000/brands/" || url == "http://beautybridge.mybigcommerce.com/brands/" ){
+        console.log("it's equal to just brands");
+        $('body').addClass('list-brands');
+    }
+
+    if( $(window).width() < 768 && $(".seo-txt > .category-description").height() > 250 ){
+        $(".seo-txt > .category-description").addClass("hide-rest");
+        $(".seo-txt").append("<span class='view-more'>View More</span>");
+    }
+
+    $("span.view-more").on("click", function(){
+        $(this).fadeOut();
+        $(".seo-txt > .category-description").removeClass("hide-rest");
+    })
 
 })
 

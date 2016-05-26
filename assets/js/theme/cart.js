@@ -6,6 +6,8 @@ import utils from 'bigcommerce/stencil-utils';
 import ShippingEstimator from './cart/shipping-estimator';
 import { defaultModal } from './global/modal';
 
+
+
 export default class Cart extends PageManager {
     loaded(next) {
         this.$cartContent = $('[data-cart-content]');
@@ -58,6 +60,7 @@ export default class Cart extends PageManager {
         utils.api.cart.itemRemove(itemId, (err, response) => {
             if (response.data.status === 'succeed') {
                 this.refreshContent(true);
+
             } else {
                 alert(response.data.errors.join('\n'));
             }

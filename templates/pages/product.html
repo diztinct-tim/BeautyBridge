@@ -8,7 +8,7 @@ product:
     reviews:
         limit: {{theme_settings.productpage_reviews_count}}
     related_products:
-        limit: {{theme_settings.productpage_related_products_count}}
+        limit: 10
     similar_by_views:
         limit: {{theme_settings.productpage_similar_by_views_count}}
 
@@ -41,9 +41,7 @@ product:
     </div>
 
     <!-- {{ customer.recently_viewed_products }}
-
     {{#if customer}}
-
         <div class="recently-viewed">
             <h4>Recently Viewed</h4>
             <ul class="productGrid">
@@ -54,7 +52,6 @@ product:
                 {{/each}}
             </ul>
         </section>
-
         <div class="recently-viewed">
             <h4>Recently Viewed</h4>
             <ul class="productGrid">
@@ -65,7 +62,6 @@ product:
                 {{/each}}
             </ul>
         </section>
-
         <div class="recently-viewed">
             <h4>Recently Viewed</h4>
             <ul class="productGrid">
@@ -76,7 +72,6 @@ product:
                 {{/each}}
             </ul>
         </section>
-
     {{else}} -->
                     
     <div class="related-products">

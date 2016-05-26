@@ -8,6 +8,16 @@ import collapsibleFactory from './collapsible';
 import { Validators } from './form-utils';
 import nod from './nod';
 
+
+// $(function(){
+
+//     $(".body").on("click", ".accordion-navigation.toggleLink", function(){
+//         $(this).toggleClass("is-open");
+//         $(this).next(".accordion-content").toggleClass('is-open');
+//     })
+
+// });
+
 /**
  * Faceted search view component
  */

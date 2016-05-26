@@ -1,6 +1,6 @@
 
 <h2 class="page-heading">Best Sellers</h2>
-<a class="see-more" href="">SEE MORE</a>
+<a class="see-more" href="/makeup?sort=bestselling">SEE MORE</a>
 <section class="productCarousel"
     data-slick='{
         "dots": true,
@@ -35,7 +35,7 @@
 >
     {{#each products}}
     <div class="productCarousel-slide">
-        {{> components/products/card theme_settings=../theme_settings}}
+        {{> components/products/best-top-related-card theme_settings=../theme_settings}}
     </div>
     {{/each}}
 </section>
