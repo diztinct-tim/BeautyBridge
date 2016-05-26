@@ -54,7 +54,7 @@ body {
 }
 .click-tog-search:before{
     content: "";
-    background: url("../../assets/img/black-search-final.png");
+    background: url("../../assets/img/search-2x-black.png");
     display: inline-block;
     background-position: center center;
     background-size: 22px 22px;
@@ -884,7 +884,7 @@ body {
     }
     .click-tog-search:before{
         content: "";
-        background: url("../../assets/img/gray-search-final.png");
+        background: url("../../assets/img/search-2x-gray.png");
         display: inline-block;
         background-position: center center;
         background-size: 28px 28px;
@@ -896,7 +896,7 @@ body {
     }
     .click-tog-search:hover:before{
         content: "";
-        background: url("../../assets/img/black-search-final.png");
+        background: url("../../assets/img/search-2x-black.png");
         display: inline-block;
         background-position: center center;
         background-size: 28px 28px;

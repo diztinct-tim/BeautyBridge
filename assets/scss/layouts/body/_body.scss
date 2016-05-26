@@ -326,15 +326,12 @@ h1, h2, h3, h4, h5, h6{
         text-align:left;
     }
     .page-heading{
-        margin-top:50px;
+        margin-top:20px;
         color: #000;
         margin-bottom:20px;
     }
     .CategoryPage .body > .container{
         padding:0px 20px;
-    }
-    .CategoryPage .admin-input-area {
-        // display: none;
     }
     #facetedSearch {
         border-top: none;
@@ -820,7 +817,7 @@ h1, h2, h3, h4, h5, h6{
         list-style: none;
         margin-left:0px;
         padding-left:0px;
-
+        margin-bottom: 50px;
     }
     .product-details-accordion > ul > li > h3{
         cursor:pointer;
@@ -910,17 +907,23 @@ h1, h2, h3, h4, h5, h6{
         font-weight: 400;
         text-align: center;
     }
+    .q-and-a{
+        padding:20px 0 30px;
+    }
+    .related-products > h4{
+        margin-top:30px;
+    }
     .q-and-a > a {
         text-align: center;
         font-weight: 700;
         display: block;
-        width: 150px;
+        width: 180px;
         border: 1px solid #000;
         margin: 0 auto;
-        padding: 7px;
+        padding: 5px 15px 7px;
         color: #000;
         text-decoration: none;
-        margin-bottom:20px;
+        margin-bottom: 20px;
     }
     .q-and-a > a > img {
         margin-right: 5px;
@@ -1481,6 +1484,7 @@ h1, h2, h3, h4, h5, h6{
         max-height: 140px;
         width: auto;
         margin: 0 auto;
+        height: auto;
     }
     .olapic .olapic-nav-button::before {
         content: '';
@@ -1488,14 +1492,14 @@ h1, h2, h3, h4, h5, h6{
         height:44px !important;
         width:25px !important;
     }
-    .olapic .olapic-nav-prev::before, .olapic .olapic-nav-prev:hover::before{
+    .olapic-wrap .olapic .olapic-nav-prev::before, .olapic-wrap .olapic .olapic-nav-prev:hover::before{
         content:"";
         background:url('../../assets/img/slider-left-arrow.png') !important;
         top: 11px;
         left: 0px !important;
         background-position: 0 0;
     }
-    .olapic .olapic-nav-next::before, .olapic .olapic-nav-next:hover::before{
+    .olapic-wrap .olapic .olapic-nav-next::before, .olapic-wrap .olapic .olapic-nav-next:hover::before{
         content:"";
         background:url('../../assets/img/slider-right-arrow.png') !important;
         top: 11px;
@@ -1718,11 +1722,71 @@ h1, h2, h3, h4, h5, h6{
         pointer-events: none !important;
         cursor: default !important;
     }
+
+
+    // MOBILE BACK BREADCRUMB
     .breadcrumbs {
         display: block !important;
         padding-top: 20px;
         padding-left: 0px !important;
+        margin-bottom:15px;
     }
+    .breadcrumbs > li{
+        display:none !important;
+    }
+    .breadcrumbs > li:nth-last-child(2){
+        display:block !important;
+        text-align:center;
+    }
+    .breadcrumbs > li.back-arrow::before {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        background: url("../../assets/img/black-right-arrow.jpg") !important;
+        background-repeat: no-repeat;
+        background-size: 6px 12px;
+        height: 12px;
+        width: 6px;
+        right: auto;
+        left: calc(50% - 40px);
+        top: 24px;
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    .back-arrow > .breadcrumb-label {
+        font-size: 14px;
+    }
+    .question-mk{
+        display: inline-block;
+        height: 22px;
+        width: 22px;
+        background-image: url("../../assets/img/question-mark-black.png");
+        background-size: 22px 22px;
+        position: relative;
+        top: 4px;
+        margin-right: 5px;
+    }
+    .q-and-a > a:hover{
+        color:#fff;
+        background:#000;
+    }
+    .q-and-a > a:hover > .question-mk{
+        display: inline-block;
+        height: 22px;
+        width: 22px;
+        background-image: url("../../assets/img/question-mark-red.png");
+        background-size: 22px 22px;
+        position: relative;
+        top: 4px;
+        margin-right: 5px;
+    }
+    .related-products {
+        margin: 10px 0px 40px 0px;
+    }
+
+
+
  
 
 
@@ -1835,9 +1899,10 @@ h1, h2, h3, h4, h5, h6{
     div.related-products ul.productGrid li > article.card > figure.card-figure > a > .card-image{
         max-height: 175px;
     }
-    .slick-slide .card-figure, .slick-slide .card-figure img  {
-        height: 160px;
-        max-height: none;
+    .slick-slide .card-figure img {
+        max-height: 160px;
+        width: auto;
+        height: auto;
     }
     .olapic-text .olapic-bb {
         padding-top: 15px;
@@ -1861,8 +1926,12 @@ h1, h2, h3, h4, h5, h6{
     section.productView-images > figure.productView-image{
         height: 500px;
     }
-    .slick-slide .card-figure, .slick-slide .card-figure img  {
-        height: 180px;
+    .slick-slide .card-figure{
+        height:180px;
+    }
+    .slick-slide .card-figure img  {
+        max-height: 180px;
+        height:auto;
     }
 
 }
@@ -1978,7 +2047,7 @@ h1, h2, h3, h4, h5, h6{
         // text-align: left;
         text-align: center;
         margin-left: 0px;
-        margin-top: 30px;
+        margin-top: 15px;
     }
     .page-heading {
         margin-top: 20px;
@@ -2438,9 +2507,11 @@ h1, h2, h3, h4, h5, h6{
         -moz-transition: opacity .25s ease-in-out;
         -webkit-transition: opacity .25s ease-in-out;
     }
-
-    .slick-slide .card-figure, .slick-slide .card-figure img  {
-        height: 200px;
+    .slick-slide .card-figure{
+        height:200px;
+    }
+    .slick-slide .card-figure img  {
+        max-height: 200px;
     }
     .new-products .productCarousel, .top-products .productCarousel {
         margin-top: 20px;
@@ -2524,6 +2595,12 @@ h1, h2, h3, h4, h5, h6{
     .body.top-fix-margin{
         margin-top:175px !important;
     }
+    .breadcrumbs > li{
+        display:inline-block !important;
+    }
+    .breadcrumbs > li:nth-last-child(2){
+        display:inline-block !important;
+    }
 
 
 
@@ -2567,14 +2644,14 @@ h1, h2, h3, h4, h5, h6{
         font-size: 16px;
         font-weight: 700;
     }
-    .new-products .productCarousel, .top-products .productCarousel {
+    .new-products .productCarousel, .top-products .productCarousel, .related-products .productCarousel {
         padding-left: 40px;
         padding-right: 40px;
     }
-    .new-products .productCarousel .slick-prev, .top-products .productCarousel .slick-prev{
+    .new-products .productCarousel .slick-prev, .top-products .productCarousel .slick-prev, .related-products .productCarousel .slick-prev{
         left:10px;
     }
-    .new-products .productCarousel .slick-next, .top-products .productCarousel .slick-next{
+    .new-products .productCarousel .slick-next, .top-products .productCarousel .slick-next, .related-products .productCarousel .slick-next{
         right:10px;
     }
     .slick-prev::before, .slick-next::before {
@@ -2677,25 +2754,24 @@ h1, h2, h3, h4, h5, h6{
     }
 
 
-    .top-products .slick-prev, .new-products .slick-prev{
+    .top-products .slick-prev, .new-products .slick-prev, .related-products .slick-prev{
         left:10px;
         background: transparent;
         top:calc(50% - 30px);
         height:60px;
         width:40px;
     }
-    .top-products .slick-next, .new-products .slick-next{
+    .top-products .slick-next, .new-products .slick-next, .related-products .slick-next{
         right:10px;
         background: transparent;
         top:calc(50% - 30px);
         height:60px;
         width:40px;
     }
-    .new-products .productCarousel .slick-next:hover, .top-products .productCarousel .slick-next:hover, .new-products .productCarousel .slick-prev:hover, .top-products .productCarousel .slick-prev:hover, .related-products .productCarousel .slick-prev:before, .related-products .productCarousel .slick-next:before {
+    .new-products .productCarousel .slick-next:hover, .top-products .productCarousel .slick-next:hover, .new-products .productCarousel .slick-prev:hover, .top-products .productCarousel .slick-prev:hover, .related-products .productCarousel .slick-prev:hover, .related-products .productCarousel .slick-next:hover {
         background: #fff !important;
         box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
     }
-
     .olapic-text .show-us {
         font-size: 36px;
     }
@@ -2708,6 +2784,9 @@ h1, h2, h3, h4, h5, h6{
     }
     .olapic-text .olapic-bb {
         letter-spacing: 2px;
+    }
+    .related-product .slick-dots{
+        left:0px;
     }
 
     

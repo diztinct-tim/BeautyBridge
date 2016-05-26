@@ -10,7 +10,7 @@
                 "breakpoint": 1260,
                 "settings": {
                     "slidesToScroll": 3,
-                    "slidesToShow": {{ columns }}
+                    "slidesToShow": 4
                 }
             },
             {
@@ -33,8 +33,7 @@
 
     {{#each products}}
     <div class="productCarousel-slide">
-        
-        {{> components/products/best-top-related-card theme_settings=../theme_settings}}
+        {{> components/products/best-top-related-card }}
     </div>
     {{/each}}
 

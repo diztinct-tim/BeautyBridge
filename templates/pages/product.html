@@ -33,60 +33,23 @@ product:
 
     <div class="q-and-a">
         <h4>Questions & Answers</h4>
-        <a href=""><img src="{{cdn "webdav:img/question-mark.png"}}" alt="">Ask a Question</a>
+        <a href=""><span class="question-mk"></span>Ask a Question</a>
     </div>
 
     <div class="pdProductReviewContent" productId="{{product.id}}">
         {{product.warranty}}
     </div>
 
-    <!-- {{ customer.recently_viewed_products }}
-    {{#if customer}}
-        <div class="recently-viewed">
-            <h4>Recently Viewed</h4>
-            <ul class="productGrid">
-                {{#each recently_viewed.product}}
-                    <li class="product">
-                        {{> components/products/card hide_product_quick_view=true theme_settings=../theme_settings}}
-                    </li>
-                {{/each}}
-            </ul>
-        </section>
-        <div class="recently-viewed">
-            <h4>Recently Viewed</h4>
-            <ul class="productGrid">
-                {{#each product.recently_viewed}}
-                    <li class="product">
-                        {{> components/products/card hide_product_quick_view=true theme_settings=../theme_settings}}
-                    </li>
-                {{/each}}
-            </ul>
-        </section>
-        <div class="recently-viewed">
-            <h4>Recently Viewed</h4>
-            <ul class="productGrid">
-                {{#each products.recently_viewed}}
-                    <li class="product">
-                        {{> components/products/card hide_product_quick_view=true theme_settings=../theme_settings}}
-                    </li>
-                {{/each}}
-            </ul>
-        </section>
-    {{else}} -->
-                    
+   
+    
     <div class="related-products">
-        <h4>Related Products</h4>
-        <!-- {{> components/products/related-carousel products=products.related_products columns=5}} -->
-        <ul class="productGrid">
-             {{#each product.related_products}}
-                <li>
-                    {{> components/products/related-card theme_settings=../theme_settings}}
-                </li>
-            {{/each}}
-        </ul>
+        {{> components/products/carousel products=product.related_products columns=6}}
     </div>
 
-    <!-- {{/if}} -->
+
+
+
+    
    
 {{/partial}}
 {{> layout/base}}
