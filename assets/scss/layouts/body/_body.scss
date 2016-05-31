@@ -1742,13 +1742,12 @@ h1, h2, h3, h4, h5, h6{
         position: absolute;
         content: "";
         display: inline-block;
-        background: url("../../assets/img/black-right-arrow.jpg") !important;
-        background-repeat: no-repeat;
+        background-image: url("../../assets/img/black-right-arrow.jpg") !important;
         background-size: 6px 12px;
         height: 12px;
         width: 6px;
         right: auto;
-        left: calc(50% - 40px);
+        left: calc(50% - 35px);
         top: 24px;
         -webkit-transform: rotate(180deg);
         -ms-transform: rotate(180deg);
@@ -2570,8 +2569,14 @@ h1, h2, h3, h4, h5, h6{
         -o-animation: fadein .4s;
         animation: fadein .4s;
     }
-    .menu-wrap.desk-fix{
-        top:25px;
+    .menu-wrap.mob-fix{
+        position:static;
+    }
+    .menu-wrap.desk-fix, .menu-wrap.desk-fix.mob-fix{
+        position:fixed;
+        top:62px;
+        width:60px;
+        box-shadow:none;
         z-index:100;
         webkit-animation: fadein .4s;
         -moz-animation: fadein .4s;
@@ -2580,7 +2585,7 @@ h1, h2, h3, h4, h5, h6{
         animation: fadein .4s;        
     }
     .mob-tog-search.fixed-head.open{
-        top:175px;
+        top:177px;
     }
     .banners.cf.desk-fix{
         position:fixed;
@@ -2601,6 +2606,7 @@ h1, h2, h3, h4, h5, h6{
     .breadcrumbs > li:nth-last-child(2){
         display:inline-block !important;
     }
+    
 
 
 
@@ -2787,6 +2793,9 @@ h1, h2, h3, h4, h5, h6{
     }
     .related-product .slick-dots{
         left:0px;
+    }
+    .mob-tog-search, .mob-tog-search.fixed-head.open {
+        top: 180px;
     }
 
     

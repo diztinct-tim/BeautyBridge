@@ -1,12 +1,5 @@
 $(function(){
 
-    // $("body").on("click", ".click-tog-search", function(){
-    //     $(this).parent().toggleClass("black-outline");
-    //     $(this).toggleClass("open-search");
-    //     $(".mob-tog-search").slideToggle("fast");
-    //     $(".mob-tog-search").toggleClass("open");
-    // });
-
     $(".search-wrap").on("click", function(){
         $(this).toggleClass("black-outline");
         $(".click-tog-search").toggleClass("open-search");
@@ -55,11 +48,11 @@ $(function(){
             });
         }
     }
-    changeMobileBreadcrumb();
+    mobileStickyHeader();
 
     // DESKTOP STICKY HEADER
     function desktopStickyHeader(){
-        if( $(window).width() >= 768 ){
+        if( $(window).width() > 767 ){
             var previousScroll = 0,
             headerOrgOffset = $('.header').offset().top - 70;
 
@@ -90,7 +83,7 @@ $(function(){
             });
         }
     }
-    changeMobileBreadcrumb();
+    desktopStickyHeader();
 
     // BREADCRUMB BACK MOBILE
     function changeMobileBreadcrumb(){
@@ -103,10 +96,36 @@ $(function(){
     }
     changeMobileBreadcrumb();
 
+
+
+    function resetStickyHeaders(){
+        // REMOVE MOBILE CLASSES
+        $('.menu-wrap').removeClass('mob-fix');
+        $('.header-logo').removeClass('bottom-spacer');
+        $('.mob-tog-search').removeClass('fixed-head');
+        // REMOVE DESK CLASSES
+        $('.header').removeClass('desk-fix');
+        $('.banners.cf').removeClass('desk-fix');
+        $('.menu-wrap').removeClass('desk-fix');
+        $('.mob-tog-search').removeClass('fixed-head');
+        $('div.body').removeClass('top-fix-margin');
+    };
+
+    // mobileStickyHeader();
+    // desktopStickyHeader();
+
+        // mobileStickyHeader();
+        // desktopStickyHeader();
+        // changeMobileBreadcrumb();
+
     $( window ).resize(function() {
-        mobileStickyHeader();
-        desktopStickyHeader();
-        changeMobileBreadcrumb();
+        var width = $(window).width();
+        console.log(width);
+        if( width > 767){
+            $(".menu-wrap").removeClass("mob-fix");
+            resetStickyHeaders();
+            changeMobileBreadcrumb();
+        }
     });
 
 

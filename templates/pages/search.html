@@ -5,16 +5,23 @@ product_results:
 {{inject 'categoryTree' forms.search.category_options}}
 {{inject 'searchProductsPerPage' theme_settings.searchpage_products_per_page}}
 {{#partial "head"}}
+
+    <!-- Celebros Search -->
+    <script src="//UITemplateV3.celebros.com/UITemplate/Scripts/jquery.1.7.Celebros.js" type="text/javascript"></script>
+    <script src="//UITemplateV3.celebros.com/UITemplate/Clients/BeautyBridge/output/ClientConfig.js" type="text/javascript"></script>
+    <!-- End Celebros Search -->
+
     {{#if pagination.product_results.previous}}
         <link rel="prev" href="{{pagination.product_results.previous}}">
     {{/if}}
     {{#if pagination.product_results.next}}
         <link rel="next" href="{{pagination.product_results.next}}">
     {{/if}}
+
 {{/partial}}
 
 {{#partial "page"}}
-{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+<!-- {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}} -->
 
 <div id="celUITDiv"></div>
 
