@@ -148,29 +148,36 @@ export default class Product extends PageManager {
             ]
           });
 
-        // CREATE AT A GLANCE AREA
-        // function createAtAGlanceArea(){
-        //     if ( $("li.productView-info-name.product.type").length ){
-        //       $("<h5>Product Type:</h5>").insertBefore("li.productView-info-name.product.type:first");
-        //       $("li.productView-info-name.product.type").hide();
-        //     }
-        //     if ( $("li.productView-info-name.concern").length ){
-        //       $("<h5>Concern:</h5>").insertBefore("li.productView-info-name.concern:first");
-        //       $("li.productView-info-name.concern").hide();
-        //     }
-        // }
-        // createAtAGlanceArea();
+        function createHowToUseTab(){
+          if( $("span.product-accordion-content .directions") ){
+            $("span.product-accordion-content .directions").detach().appendTo("li.how-to-use > span");
+          } else {
+            $("li.how-to-use").hide();
+          }
+        }
+        createHowToUseTab();
 
-        // CREATE HOW TO USE AREA
-        // function createAdditionalTabs(){
-        //     $("li.description span > p > strong").each(function(){
-        //       var className = $(this).text().replace(":","");
-        //       $(this).parent("p").addClass(className);
-        //     });
-        //     $("p.Directions").clone().appendTo('.how-to-use > span > p');
-        //     $("p.Ingredients").clone().appendTo('.ingredients > span > p');
-        // }
-        // createAdditionalTabs();
+        function createIngredientsTab(){
+          if( $("span.product-accordion-content .ingredients") ){
+            $("span.product-accordion-content .ingredients").detach().appendTo("li.ingredients > span");
+          } else {
+            $("li.ingredients").hide();
+          }
+        }
+        createIngredientsTab();
+
+        function formatProductTitle(){
+          var title = $(".productView-title.ProductPageHeading").text().split(" - ")[1];
+          $(".productView-title.ProductPageHeading").html(title);
+        }
+        formatProductTitle();
+
+        function hijackBrandsLink(){
+          var brandName = $(".productView-brand > a > span").text().replace(" ","-");
+          var formattedBrandName = '/brands/' + brandName;
+          $(".productView-brand > a").attr("href", formattedBrandName);
+        }
+        hijackBrandsLink();
 
 
 

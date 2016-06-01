@@ -1427,9 +1427,9 @@ h1, h2, h3, h4, h5, h6{
         font-size:16px;
         text-transform: capitalize;
     }
-    .product-details-accordion .productView-info-value:after {
-        content: ",";
-    }
+    // .product-details-accordion .productView-info-value:after {
+    //     content: ",";
+    // }
     .desktop-slider .slick-prev{
         left:10px;
         background: transparent;
@@ -1782,6 +1782,19 @@ h1, h2, h3, h4, h5, h6{
     }
     .related-products {
         margin: 10px 0px 40px 0px;
+    }
+    .product-details-accordion .productView-info-name, .product-details-accordion .productView-info-value {
+        font-family: "Lato";
+        float: none !important;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: capitalize;
+        clear: none;
+        display: inline-block;
+        margin:0px;
+    }
+    div.description ul {
+        margin-bottom: 10px;
     }
 
 

@@ -1125,6 +1125,9 @@ body {
         left: 50%;
         max-width: 640px;
     }
+    .menu-wrap.desk-fix, .menu-wrap.desk-fix.mob-fix {
+        right: calc(50% - 620px);
+    }
 
 }
 
