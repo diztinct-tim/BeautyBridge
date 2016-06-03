@@ -30,6 +30,13 @@
         <!-- MULTI LEVEL MENU CSS -->
         <link rel="stylesheet" href="/content/dl-menu-default.css" type='text/css'>
         <link rel="stylesheet" href="/content/dl-menu-component.css" type='text/css'>
+
+        <!-- celebros css & js -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="//BeuBridge-ac.celebros.com/AutoComplete/Scripts/CelebrosAutoCompleteV3c.js"></script>  
+        <link type='text/css' rel="stylesheet" href="/content/celebros-ac.css">
+
     </head>
     <body>
 
@@ -68,7 +75,7 @@
         <script type="text/javascript">
         function pdInit() {
             var cb = (new Date()).getTime();
-            var scriptUrl = "https://beautybridge.practicaldatacore.com/mod_bigcommerce/services/pageScript.php";
+            var scriptUrl = "https://dev-beautybridge.practicaldatacore.com/mod_bigcommerce/services/pageScript.php";
             scriptUrl += "?cb=" + cb;
             scriptUrl += "&productId=" + encodeURIComponent(document.getElementById("pdPageTag").getAttribute("productId"));
             scriptUrl += "&productCode=" + encodeURIComponent(document.getElementById("pdPageTag").getAttribute("productCode"));
@@ -109,7 +116,7 @@
         <script src="/content/responsive-tables.js"></script>
 
         
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+        
         <script src="/content/modernizr.custom.js"></script>
         <script src="/content/jquery.dlmenu.js"></script>
         <script>
