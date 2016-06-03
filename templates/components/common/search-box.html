@@ -13,7 +13,8 @@
     </fieldset>
 </form>
 <script language="javascript">
-    CelebrosAutoCompleteV3("BeuBridge", "query", onSelect, "BeuBridge-ac.celebros.com", "BeuBridge-ac.celebros.com", {acShowType: "regular",btnSearch:"search_button"});
+    CelebrosAutoCompleteV3("BeuBridge", "search_query_adv", onSelect, "BeuBridge-ac.celebros.com", "BeuBridge-ac.celebros.com", {acShowType: "regular",btnSearch:"search_button"});
+    
     function onSelect(aParameter)
     { 
         if ((aParameter["SelectedURL"]!="")&&(aParameter["IsAutoComplete"]))
