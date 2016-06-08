@@ -284,6 +284,22 @@ body {
 #search_query_adv:-ms-input-placeholder {  
    color: #fff; 
 }
+#nl_email::-webkit-input-placeholder {
+   color: #888;
+   opacity:1;
+}
+#nl_email:-moz-placeholder { /* Firefox 18- */
+   color: #888;
+   opacity:1;
+}
+#nl_email::-moz-placeholder {  /* Firefox 19+ */
+   color: #888; 
+   opacity:1;
+}
+#nl_email:-ms-input-placeholder {  
+   color: #888; 
+   opacity:1;
+}
 .mob-cart-num {
     position: relative;
     color: #fff;
@@ -401,7 +417,8 @@ body {
         margin-top: 0px;
         font-size:0px;
         border:none;
-        background: url("../../assets/img/search-icon.jpg") no-repeat center center;
+        background: url("../../assets/img/white-search.png") no-repeat center center;
+        background-size:21px 21px;
         height:43px;
     }
     .mob-tog-search #search_query_adv {
@@ -409,7 +426,7 @@ body {
         border: none;
         border-radius: 0px !important;
         color: #fff;
-        font-style: italic;
+        // font-style: italic;
         text-transform: capitalize;
     }
     .mob-tog-search .form-prefixPostfix {

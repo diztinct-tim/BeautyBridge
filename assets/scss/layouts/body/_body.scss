@@ -1623,13 +1623,14 @@ h1, h2, h3, h4, h5, h6{
     }
     .olapic-bb {
         padding-top: 15px;
-        margin-bottom: 0px;
         color: #d51a3a;
         text-align: center;
-        padding-bottom: 0px;
-        line-height: 10px;
         font-weight:700;
-        font-size:18px;
+        padding-top: 15px;
+        margin-bottom: 15px;
+        padding-bottom: 0px;
+        line-height: 26px;
+        font-size: 24px;
     }
 
     .Cart .body .page {
@@ -1796,6 +1797,12 @@ h1, h2, h3, h4, h5, h6{
     div.description ul {
         margin-bottom: 10px;
     }
+    .center-wrap.search-wrap.black-outline {
+        border: 1px solid #fff !important;
+    }
+    .olapic-text .show-us {
+        display: none;
+    }
 
 
 
@@ -1916,13 +1923,6 @@ h1, h2, h3, h4, h5, h6{
         width: auto;
         height: auto;
     }
-    .olapic-text .olapic-bb {
-        padding-top: 15px;
-        margin-bottom: 0px;
-        padding-bottom: 0px;
-        line-height: 10px;
-        font-size:20px;
-    }
     .olapic-text .show-us{
         font-size:24px;
     }
@@ -2025,8 +2025,12 @@ h1, h2, h3, h4, h5, h6{
         right:20px;
     }
     .banner-one, .banner-two, .banner-three{
-        width:33.3333%;
+        width:calc(33.3333% - 14px);;
         float:left;
+    }
+    .banner-two{
+        margin-left:21px;
+        margin-right:21px;
     }
     .category-banner {
         margin-bottom: 60px;
@@ -2372,6 +2376,7 @@ h1, h2, h3, h4, h5, h6{
         width: 300px;
     }
     .olapic-text .show-us {
+        display: block;
         font-size: 30px;
         float: none;
         padding-left: 0px;
@@ -2385,6 +2390,9 @@ h1, h2, h3, h4, h5, h6{
         max-width: 768px;
         margin:0 auto;
         padding: 0px 20px;
+    }
+    .olapic-text .olapic-bb {
+        margin-bottom: 0px;
     }
     .olapic-text p {
         display: block;

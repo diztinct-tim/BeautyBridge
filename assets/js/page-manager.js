@@ -5,6 +5,7 @@ $(function(){
         $(".click-tog-search").toggleClass("open-search");
         $(".mob-tog-search").slideToggle("fast");
         $(".mob-tog-search").toggleClass("open");
+        $("#search_query_adv").focus();
     });
 
     $("li.account-menu-toggle > span").on("click", function(){
@@ -216,7 +217,7 @@ export default class PageManager {
             $("#search_query_adv").attr("placeholder","Search");
         }
         else {
-            $("#search_query_adv").attr("placeholder","Search by keyword or search term");
+            $("#search_query_adv").attr("placeholder","What are you looking for?");
         }
 
 
