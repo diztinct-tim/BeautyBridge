@@ -18,7 +18,7 @@ html, body{
 
 .footer {
     background-color: $footer-background;
-    border-top: 1px solid #000;
+    border-top: 5px solid #000;
     padding: 15px 0 0px;
     max-width: 1440px;
     width: 100%;
@@ -311,6 +311,7 @@ html, body{
         padding-right:20px;
         padding-top: 25px;
         padding-bottom: 22px;
+        height: 129px;
     }
     .contact-us{
         border-top:none;
@@ -348,6 +349,7 @@ html, body{
     .social-icons{
         padding-top: 25px;
         padding-bottom: 22px;
+        height:129px;
     }
     .footer-inside-container {
         margin-top: -1px;

@@ -1,6 +1,13 @@
 $(function(){
 
     $(".search-wrap").on("click", function(){
+        if($("#menu").hasClass("is-open")){
+            $("#menu").removeClass("is-open");
+            $("body").removeClass("menu-open");
+            $("span.mob-menu").removeClass("dl-active");
+            $("#menu").data("aria-hidden", "false");
+            $(".mobileMenu-toggle").removeClass("is-open");
+        }
         $(this).toggleClass("black-outline");
         $(".click-tog-search").toggleClass("open-search");
         $(".mob-tog-search").slideToggle("fast");
@@ -18,6 +25,7 @@ $(function(){
             $(".center-wrap.search-wrap").removeClass('black-outline');
             $(".click-tog-search").removeClass("open-search");
             $(".mob-tog-search").removeClass("open");
+            $(".mob-tog-search").css("display","none");
         }
     });
 
@@ -86,6 +94,7 @@ $(function(){
     }
     desktopStickyHeader();
 
+
     // BREADCRUMB BACK MOBILE
     function changeMobileBreadcrumb(){
         if( $(window).width() < 768 ){
@@ -96,8 +105,6 @@ $(function(){
         }
     }
     changeMobileBreadcrumb();
-
-
 
     function resetStickyHeaders(){
         // REMOVE MOBILE CLASSES
@@ -182,7 +189,7 @@ export default class PageManager {
         addSearchPageClass();
 
         var pageName = window.location.href;
-        if( pageName == "http://beautybridge.mybigcommerce.com/brands/" || pageName == "http://localhost:3000/brands/" ){
+        if( pageName == "http://beautybridge.mybigcommerce.com/brands/" || pageName == "http://localhost:3000/brands/" || pageName == "http://www.beautybridge.com/brands/"){
             $(".body").addClass("brands-list");
             $(".sub-cat-list > .navList").addClass("brandGrid");
             addListHeaders();
@@ -219,15 +226,6 @@ export default class PageManager {
         else {
             $("#search_query_adv").attr("placeholder","What are you looking for?");
         }
-
-
-
-
-
-
-
-
-
 
     }
 

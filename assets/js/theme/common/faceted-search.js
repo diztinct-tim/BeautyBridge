@@ -9,15 +9,6 @@ import { Validators } from './form-utils';
 import nod from './nod';
 
 
-// $(function(){
-
-//     $(".body").on("click", ".accordion-navigation.toggleLink", function(){
-//         $(this).toggleClass("is-open");
-//         $(this).next(".accordion-content").toggleClass('is-open');
-//     })
-
-// });
-
 /**
  * Faceted search view component
  */
@@ -123,6 +114,14 @@ class FacetedSearch {
 
         // Bind events
         this.bindEvents();
+
+        var pageLength = $(".bottom-pagination ul li").length;
+        var currentPage = $(".pagination-item.pagination-item--current").data().pageNum;
+        this.mobilefyPagination(pageLength, currentPage);
+        this.checkIfFirstPage();
+
+
+
     }
 
     updateView() {
@@ -138,6 +137,30 @@ class FacetedSearch {
             // Refresh view with new content
             this.refreshView(content);
         });
+
+    }
+
+    
+    checkIfFirstPage(){
+        var currentPage = $(".pagination-item.pagination-item--current").data("pageNum");
+        if( currentPage == '1'){
+            $(".pagination-item.pagination-item--next").addClass("center-me");
+        }
+    }
+
+    mobilefyPagination(pageLength, currentPage){
+        console.log("inside function");
+        console.log('currentPage = ' + currentPage);
+        console.log("pagination length = " + pageLength);
+        if(pageLength > 2){
+            $("li.pagination-item").each(function(idx){
+                $(this).removeClass("hide-me");
+                console.log("data = " + $(this).data("pageNum"));
+                if($(this).data("pageNum") > currentPage + 2 || $(this).data("pageNum") < currentPage - 2){
+                    $(this).addClass("hide-me");
+                }
+            })
+        }
     }
 
     expandFacetItems($navList) {
@@ -370,6 +393,9 @@ class FacetedSearch {
 
     onStateChange() {
         this.updateView();
+
+        console.log('state changed')
+        
     }
 
     onAccordionToggle(event) {

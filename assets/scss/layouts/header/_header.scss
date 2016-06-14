@@ -449,7 +449,7 @@ body {
     }
     #menu.is-open > .navPages{
         padding:0px;
-        border-top: 1px solid #74736f;
+        border-top: 1px solid #ddd;
     }
     div.info-links{
         background:#333333;
@@ -462,6 +462,7 @@ body {
         color:#d51a3a;
         font-size:16px;
         font-weight:700;
+        text-transform: uppercase !important;
     }
     li.dl-back > a:after{
         position: absolute;
@@ -595,7 +596,7 @@ body {
     .no-touch .dl-menuwrapper li a:hover{
         background: transparent !important;
     }
-    .info-links > .navPages-list.navPages-list--user > li, .column:nth-child(2){
+    .info-links > .navPages-list.navPages-list--user > li{
         background:#333 !important;
     }
     .dl-menuwrapper li{
@@ -657,7 +658,17 @@ body {
         font-weight: 700;
         font-family:$font-family;
     }
-
+    li.parent-li > ul.dl-submenu > li:nth-child(2) {
+        border: none !important;
+    }
+    .dl-menuwrapper ul.dl-submenu li a.has-children {
+        font-weight: 700;
+        text-transform: uppercase !important;
+    }
+    .dl-menuwrapper ul.dl-submenu li a{
+        font-weight: 400;
+        text-transform: capitalize !important;
+    }
 
 
 
@@ -788,7 +799,7 @@ body {
         z-index: 99999999;
         margin-left:0px;
         list-style:none;
-        top: 28px;
+        top: 33px;
         margin-left: -20px;
         width: 140px;
         text-align: left;
@@ -1048,7 +1059,10 @@ body {
     .navPage-subMenu.brands-top-margin {
         margin-top: 38px;
     }
-    
+    #cart-preview-dropdown.dropdown-menu.is-open.f-open-dropdown{
+        top:25px !important;
+    }
+
 
      
 

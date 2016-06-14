@@ -2,8 +2,6 @@
 
 recently_viewed: true
 
-
-
 product:
     reviews:
         limit: {{theme_settings.productpage_reviews_count}}
@@ -40,15 +38,10 @@ product:
         {{product.warranty}}
     </div>
 
-   
-    
     <div class="related-products">
+        <h2 class="page-heading">You May Also Like</h2>
         {{> components/products/carousel products=product.related_products columns=6}}
     </div>
-
-
-
-
     
    
 {{/partial}}

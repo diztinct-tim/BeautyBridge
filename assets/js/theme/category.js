@@ -3,10 +3,10 @@ import CatalogPage from './catalog';
 import $ from 'jquery';
 import FacetedSearch from './common/faceted-search';
 
+
 $(function(){
 
     function moveSeoText(){
-        // $(".admin-input-area").detach().appendTo(".seo-txt");
         $(".category-description").detach().appendTo(".seo-txt");
     }
     moveSeoText();
@@ -18,7 +18,7 @@ $(function(){
 
     // IF ITS BRANDS CATEGORY, CHANGE THE VIEW
     var url = window.location.href;
-    if ( url == "http://localhost:3000/brands/" || url == "http://beautybridge.mybigcommerce.com/brands/" ){
+    if ( url == "http://localhost:3000/brands/" || url == "http://beautybridge.mybigcommerce.com/brands/" || url == "www.beautybridge.com/brands/" ){
         console.log("it's equal to just brands");
         $('body').addClass('list-brands');
     }
@@ -31,9 +31,16 @@ $(function(){
     $("span.view-more").on("click", function(){
         $(this).fadeOut();
         $(".seo-txt > .category-description").removeClass("hide-rest");
-    })
+    });
 
+    var currentPage = $(".pagination-item.pagination-item--current").data("pageNum");
+    if( currentPage == '1'){
+        $(".pagination-item.pagination-item--next").addClass("center-me");
+    }
+    
 })
+
+
 
 
 export default class Category extends CatalogPage {
@@ -44,6 +51,7 @@ export default class Category extends CatalogPage {
             this.onSortBySubmit = this.onSortBySubmit.bind(this);
             hooks.on('sortBy-submitted', this.onSortBySubmit);
         }
+
     }
 
     initFacetedSearch() {
@@ -72,6 +80,7 @@ export default class Category extends CatalogPage {
             $('html, body').animate({
                 scrollTop: 0,
             }, 100);
+
         });
     }
 }

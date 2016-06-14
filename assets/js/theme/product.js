@@ -149,7 +149,7 @@ export default class Product extends PageManager {
           });
 
         function createHowToUseTab(){
-          if( $("span.product-accordion-content .directions") ){
+          if( $("span.product-accordion-content .directions").text().length > 0 ){
             $("span.product-accordion-content .directions").detach().appendTo("li.how-to-use > span");
           } else {
             $("li.how-to-use").hide();
@@ -158,7 +158,7 @@ export default class Product extends PageManager {
         createHowToUseTab();
 
         function createIngredientsTab(){
-          if( $("span.product-accordion-content .ingredients") ){
+          if( $("span.product-accordion-content .ingredients").text().length > 0 ){
             $("span.product-accordion-content .ingredients").detach().appendTo("li.ingredients > span");
           } else {
             $("li.ingredients").hide();

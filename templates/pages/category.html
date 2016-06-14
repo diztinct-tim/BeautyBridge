@@ -2,7 +2,7 @@
 category:
     shop_by_price: true
     products:
-        limit: {{theme_settings.categorypage_products_per_page}}
+        limit: 24
 ---
 {{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
 {{#partial "head"}}
@@ -82,6 +82,19 @@ category:
         {{/if}}
     
         <div class="seo-txt"></div>
+        
+        <div class="category-olapic">
+            <div id="olapic_specific_widget"></div><script type="text/javascript" src="https://photorankstatics-a.akamaihd.net/81b03e40475846d5883661ff57b34ece/static/frontend/latest/build.min.js"  data-olapic="olapic_specific_widget" data-instance="a04fe8be4e1d97f4c11de93b3f20fe1a" data-apikey="c8d32af7a5848379872b931655c849bffa25d283a9d4b300435aa1dfd8aa18f1" data-tags="{{category.id}}" async="async"></script>
+        </div>
+
+        <script>
+
+            // $(function(){
+
+                
+            // })
+            
+        </script>      
 
     </main>
 </div>

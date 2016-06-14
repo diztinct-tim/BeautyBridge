@@ -63,8 +63,10 @@ $bold: 700;
 
     &.is-open {
         display: block;
-        padding-top: $header-height;
+        padding-top: 0px;
+        top:55px;
         z-index: 9;
+        height:0px;
     }
 }
 
