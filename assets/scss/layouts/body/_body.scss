@@ -747,15 +747,6 @@ h1, h2, h3, h4, h5, h6{
     .button--icon svg {
         fill: #000;
     }
-    #form-action-addToCart {
-        background: transparent;
-        color: #000;
-        text-transform: uppercase;
-        font-size: 20px;
-        text-indent: 28px;
-        border-radius: 0px;
-        border: 3px solid #000;
-    }
     .productView-options form.form .form-label {
         color: #000;
         text-transform: uppercase !important;
@@ -771,11 +762,13 @@ h1, h2, h3, h4, h5, h6{
     .productView-options form.form .form-label .small{
         display:none;
     }
-    #form-action-addToCart{
-        background: #fff url("../../assets/img/red-cart.png") no-repeat center center;
-        background-repeat: no-repeat;
-        background-size: 17px 21px;
-        background-position: calc(50% - 75px) calc(50% - 1px);
+    #form-action-addToCart {
+        text-transform: uppercase;
+        font-size: 20px;
+        border-radius: 0px;
+        border: 3px solid #000;
+        background: #000;
+        color:#fff;
         padding: 15px 50px !important;
         font-family:$font-family;
         font-weight:$bold;
@@ -783,11 +776,8 @@ h1, h2, h3, h4, h5, h6{
         max-width:445px;
     }
     #form-action-addToCart:hover{
-        background: #000 url("../../assets/img/red-cart.png") no-repeat center center;
-        color:#fff;
-        background-position: calc(50% - 75px) calc(50% - 1px);
-        font-family:$font-family;
-        font-weight:$bold;
+        background: #fff;
+        color:#000;
     }
     .form-select{
         border-radius:0px;
@@ -845,7 +835,7 @@ h1, h2, h3, h4, h5, h6{
         font-family: $font-family;
         font-weight:$bold;
         color:#000;
-        padding-left:17px;
+        padding-left:14px;
     }
     .productView-options .form-field.form-field--increments > label {
         margin-bottom: 10px;
@@ -861,7 +851,7 @@ h1, h2, h3, h4, h5, h6{
         width: 6px;
         background-size:6px 12px !important;
         position: relative;
-        left: -8px;
+        left: -10px;
         top:0px;
         -webkit-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
@@ -1715,7 +1705,7 @@ h1, h2, h3, h4, h5, h6{
     }
 
     .navList-action--checkbox::after {
-        background-image: url("/content/img/checked-box.png");
+        background-image: url("../../assets/img/checked-box.png");
         background-size: 18px 18px;
         height: 18px;
         width: 18px;
@@ -1760,10 +1750,7 @@ h1, h2, h3, h4, h5, h6{
     .header-logo.bottom-spacer{
         margin-bottom:55px;
     }
-    .mob-tog-search.fixed-head.open{
-        position:fixed;
-        top:55px;
-    }
+
     .menu-wrap{
         transition: transform 100ms ease-out;
     }
@@ -2182,11 +2169,9 @@ h1, h2, h3, h4, h5, h6{
     .ProductPage .related-products .price.price--rrp.retail {
         display: block;
     }
-
-    section.productView-images > figure.productView-image{
-        max-height:250px;
+    section.productView-images > figure.productView-image, section.productView-images > figure.productView-image > a > img {
+        max-height: 250px;
     }
-
     .home-page .olapic .olapic-slider-wrapper {
         width: calc(100% - 100px) !important;
         max-width:none !important;
@@ -2194,24 +2179,9 @@ h1, h2, h3, h4, h5, h6{
     .home-page .olapic .olapic-carousel li {
         margin-right: 5px !important;
     }
-
-
     .pagination-item.pagination-item--previous, .pagination-item.pagination-item--next {
-        display: block;
-        float: none;
-        width: 60px;
-        clear: both;
-        margin: 0 auto !important;
-    }
-    .pagination-item.pagination-item--previous {
-        position: relative;
-        top: 70px;
-        left: -40px;
-    }
-    .pagination-item.pagination-item--next {
-        position: relative;
-        left: 34px;
-        top: 6px;
+        display:inline-block;
+        width:60px;
     }
     .pagination-item.pagination-item--next.center-me {
         left: 0;
@@ -2225,7 +2195,14 @@ h1, h2, h3, h4, h5, h6{
     .bottom-pagination .pagination-list{
         margin-bottom:40px;
     }
-
+    .pagination-item--next:hover > a, .pagination-item--previous:hover > a {
+        background: #000;
+        color: #fff !important;
+        border-radius: 0px;
+    }
+    .related-products .page-heading {
+        font-size: 20px;
+    }
  
 
 
@@ -2346,8 +2323,8 @@ h1, h2, h3, h4, h5, h6{
     .olapic-text .show-us{
         font-size:24px;
     }
-    section.productView-images > figure.productView-image{
-        max-height:300px;
+    section.productView-images > figure.productView-image, section.productView-images > figure.productView-image > a > img {
+        max-height: 300px;
     }
     .olapic-wrap .olapic .olapic-nav-next::before, .olapic-wrap .olapic .olapic-nav-next:hover::before, .olapic-wrap .olapic .olapic-nav-prev::before, .olapic-wrap .olapic .olapic-nav-prev:hover::before {
         width:40px !important;
@@ -2620,7 +2597,7 @@ h1, h2, h3, h4, h5, h6{
     }
     .hidden-mobile .desk-only {
         border-color: #ccc !important;
-        padding: 2px;
+        padding: 2px 2px 2px 5px;
     }
     .landing-page-area{
         display:block;
@@ -3038,10 +3015,6 @@ h1, h2, h3, h4, h5, h6{
         -o-animation: fadein .4s;
         animation: fadein .4s;        
     }
-    .mob-tog-search.fixed-head.open{
-        // top:177px;
-        top: 129px;
-    }
     .banners.cf.desk-fix{
         position:fixed;
         top:0px;
@@ -3101,7 +3074,7 @@ h1, h2, h3, h4, h5, h6{
         padding-bottom: 50px;
     }
     .olapic-text .olapic-bb {
-        padding-top: 55px;
+        padding-top: 40px;
     }
     .featured-brands h4 {
         margin-top: 15px !important;
@@ -3145,13 +3118,6 @@ h1, h2, h3, h4, h5, h6{
     .olapic-text p, .olapic-text p span {
             font-size: 20px;
     }
-    .navPages-quickSearch.mob-tog-search {
-        top: 60px;
-        z-index: 1000;
-    }
-    .navPages-quickSearch.mob-tog-search {
-        max-width: 100%;
-    }
     .footer-info-col.footer-subscription {
         padding-top: 25px;
     }
@@ -3191,11 +3157,7 @@ h1, h2, h3, h4, h5, h6{
     .CategoryPage .admin-input-area {
         margin-bottom: 20px;
     }
-    .pagination-item--next:hover > a, .pagination-item--previous:hover > a {
-        background: #000;
-        color: #fff !important;
-        border-radius: 0px;
-    }
+
     .pagination-link {
         border: 1px solid #fff;
         border-radius: 0px !important;
@@ -3285,6 +3247,15 @@ h1, h2, h3, h4, h5, h6{
         position: static;
         display: inline-block;
         width:auto;
+    }
+    .ProductPage .productView {
+        padding-top: 40px;
+    }
+    .related-products .page-heading {
+        font-size: 26px;
+    }
+    section.productView-images > figure.productView-image, section.productView-images > figure.productView-image > a > img {
+        max-height: none;
     }
 
 
@@ -3410,12 +3381,8 @@ h1, h2, h3, h4, h5, h6{
         max-width: none;
     }
     .navPages-quickSearch.mob-tog-search {
-        // max-width: 50%;
         max-width: 1280px;
         right: 0px;
-    }
-    .olapic-text p, .olapic-text p span{
-        font-size:16px;
     }
     .olapic-text p > span {
         display: inline;
@@ -3461,9 +3428,6 @@ h1, h2, h3, h4, h5, h6{
     .olapic-text .show-us {
         font-size: 36px;
     }
-    .olapic-text p, .olapic-text p span {
-        font-size: 18px;
-    }
     .olapic-wrap {
         padding-bottom: 35px;
         padding-top: 25px;
@@ -3473,12 +3437,6 @@ h1, h2, h3, h4, h5, h6{
     }
     .related-product .slick-dots{
         left:0px;
-    }
-    .mob-tog-search, .mob-tog-search.fixed-head.open {
-        top: 139px;
-        width: 100%;
-        left: calc(50% - 640px);
-        max-width: 1280px;
     }
     .related-products .slick-dots {
         left: 0px;
@@ -3496,6 +3454,12 @@ h1, h2, h3, h4, h5, h6{
     .olapic-wrap .olapic .olapic-nav-next::before, .olapic-wrap .olapic .olapic-nav-next:hover::before, .olapic-wrap .olapic .olapic-nav-prev::before, .olapic-wrap .olapic .olapic-nav-prev:hover::before {
         background-color:transparent !important;
     }
+    .olapic-text .olapic-bb {
+        padding-top: 0px;
+        margin-top:20px;
+    }
+
+
 
 
     

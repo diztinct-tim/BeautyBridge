@@ -89,10 +89,13 @@ category:
 
         <script>
 
-            // $(function(){
-
-                
-            // })
+            dataLayer = [{
+              'pageType': 'category',
+              'categoryId': '{{category.id}}',
+              'pageTitle': '{{category.name}}',
+              'slug': '{{category.url}}'
+            }];
+            console.log(dataLayer);
             
         </script>      
 

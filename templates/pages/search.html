@@ -150,5 +150,18 @@ product_results:
     </main>
 </section>
 
+    <script>
+
+        var pageURL = window.location.href;
+        var slug = pageURL.split(".com")[1];
+
+        dataLayer = [{
+          'pageType': 'static',
+          'pageTitle': 'search',
+          'slug': slug
+        }];
+           
+    </script>
+
 {{/partial}}
 {{> layout/base}}

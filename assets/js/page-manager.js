@@ -10,7 +10,7 @@ $(function(){
         }
         $(this).toggleClass("black-outline");
         $(".click-tog-search").toggleClass("open-search");
-        $(".mob-tog-search").slideToggle("fast");
+        $(".mob-tog-search").slideToggle(200);
         $(".mob-tog-search").toggleClass("open");
         $("#search_query_adv").focus();
     });

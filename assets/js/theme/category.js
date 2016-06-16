@@ -33,10 +33,45 @@ $(function(){
         $(".seo-txt > .category-description").removeClass("hide-rest");
     });
 
-    var currentPage = $(".pagination-item.pagination-item--current").data("pageNum");
-    if( currentPage == '1'){
-        $(".pagination-item.pagination-item--next").addClass("center-me");
+    // var currentPage = $(".pagination-item.pagination-item--current").data("pageNum");
+    // if( currentPage == '1'){
+    //     $(".pagination-item.pagination-item--next").addClass("center-me");
+    // }
+    
+
+
+    function mobilefyPagination(pageLength, currentPage){
+        console.log("inside function");
+        console.log('currentPage = ' + currentPage);
+        console.log("pagination length = " + pageLength);
+        if(pageLength > 2){
+            $("li.pagination-item").each(function(idx){
+                $(this).removeClass("hide-me");
+                console.log("data = " + $(this).data("pageNum"));
+                if($(this).data("pageNum") > currentPage + 1 || $(this).data("pageNum") < currentPage - 1){
+                    $(this).addClass("hide-me");
+                }
+            })
+        }
     }
+    
+
+    if( $("div.page").hasClass("category-page") ){
+
+        var pageLength = $(".bottom-pagination ul li").length;
+        var currentPage = $(".pagination-item.pagination-item--current").data().pageNum;
+        mobilefyPagination(pageLength, currentPage);
+
+        var currentPage = $(".pagination-item.pagination-item--current").data("pageNum");
+        var lastPage = $(".pagination-item:last-child").data("pageNum");
+        if( currentPage == '1'){
+            $(".pagination-item.pagination-item--next").addClass("center-me");
+        } else if (currentPage == lastPage){
+            $(".pagination-item.pagination-item--previous").addClass("center-me");
+        }
+
+    }
+    
     
 })
 
@@ -71,6 +106,7 @@ export default class Category extends CatalogPage {
                 productListing: 'category/product-listing',
                 sidebar: 'category/sidebar',
             },
+            showMore: 'category/show-more',
         };
 
         this.facetedSearch = new FacetedSearch(requestOptions, (content) => {

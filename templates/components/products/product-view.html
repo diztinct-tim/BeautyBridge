@@ -174,23 +174,14 @@
                     <div class='pdRewardsPromoMessage' productId='{{product.id}}'></div>
 
                     {{{snippet 'product_addtocart'}}}
-<!--                 {{/if}}
 
-                {{#if product.out_of_stock}} -->
                 {{else}}
-
 
                     {{#if product.out_of_stock_message}}
                         {{>components/common/alert-error product.out_of_stock_message}}
                     {{else}}
                         {{>components/common/alert-error (lang 'products.sold_out')}}
                     {{/if}}
-
-                    <!-- {{#if product.out_of_stock_message}}
-                        {{>components/common/alert-error product.out_of_stock_message}}
-                    {{else}}
-                        {{>components/common/alert-error (lang 'products.sold_out')}}
-                    {{/if}} -->
 
                 {{/if}}
 
@@ -239,16 +230,12 @@
 
     </div>
 
-<!-- <p>{{product.id}}</p>
-    <p>{{product.sku}}</p> -->
-
     <div class="pp-olapic">
 
          <div id="olapic_specific_widget"></div><script type="text/javascript" src="https://photorankstatics-a.akamaihd.net/81b03e40475846d5883661ff57b34ece/static/frontend/latest/build.min.js"  data-olapic="olapic_specific_widget" data-instance="ac6614efc14c34b165c5bc8a70bc02b8" data-apikey="c8d32af7a5848379872b931655c849bffa25d283a9d4b300435aa1dfd8aa18f1" data-tags="{{product.sku}}" async="async"></script>
         <!-- Please place the dynamic variable for you product unique id into the 'data-tags' attribute in our javascript -->
         
     </div>
-
 
 
 </div>
@@ -260,3 +247,18 @@
     <div class="modal-content"></div>
     <div class="loadingOverlay"></div>
 </div>
+
+<script>
+
+    dataLayer = [{
+      'pageType': 'product',
+      'productId': '{{product.id}}',
+      'pageTitle': '{{product.title}}',
+      'imageUrl': '{{getImage product.main_image 'gallery'}}',
+      'price': '{{product.price.without_tax.value}}',
+      'slug': '{{product.url}}',
+      'brandName': '{{product.brand.name}}'
+    }];
+    console.log(dataLayer);
+
+</script>

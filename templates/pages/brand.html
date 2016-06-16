@@ -31,5 +31,23 @@ brand:
     </main>
 </div>
 
+<script>
+
+    var pageURL = window.location.href;
+    var slug = pageURL.split(".com")[1];
+    console.log(slug);
+
+    var pageName = $(".page-heading").text();
+
+    dataLayer = [{
+      'pageType': 'static',
+      'pageTitle': pageName,
+      'slug': slug
+    }];
+    console.log(dataLayer);
+           
+</script>
+
+
 {{/partial}}
 {{> layout/base}}

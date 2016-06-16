@@ -43,15 +43,22 @@
         {{/if}}
 
         {{{snippet 'cart'}}}
+
+        <script>
+            $(function(){
+                $("body").addClass("Cart");
+            })
+
+            dataLayer = [{
+              'pageType': 'static',
+              'pageTitle': 'Your Cart',
+              'slug': '/cart.php'
+            }];
+
+        </script>
+
+
     </main>
 </div>
 {{/partial}}
 {{> layout/base}}
-`
-
-
-<script>
-    $(function(){
-        $("body").addClass("Cart");
-    })
-</script>
