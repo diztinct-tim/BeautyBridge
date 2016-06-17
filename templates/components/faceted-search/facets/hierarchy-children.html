@@ -7,11 +7,11 @@
             data-id="{{ id }}"
             data-faceted-search-facet>
                 {{title}}
-                {{#if ../show_product_counts}}
+                <!-- {{#if ../show_product_counts}} -->
                     {{#if count}}
                         <span>({{count}})</span>
                     {{/if}}
-                {{/if}}
+                <!-- {{/if}} -->
             </a>
             {{#if children}}
                 {{> components/faceted-search/facets/hierarchy-children children}}

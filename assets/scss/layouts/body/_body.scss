@@ -2203,6 +2203,16 @@ h1, h2, h3, h4, h5, h6{
     .related-products .page-heading {
         font-size: 20px;
     }
+    #product-listing-container .actionBar{
+        display:none;
+    }
+    .page.brand-page {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .facet-quick-heading, .navList.facetedSearch-optionColumns * {
+        font-family: $font-family !important;
+    }
  
 
 
@@ -3256,6 +3266,17 @@ h1, h2, h3, h4, h5, h6{
     }
     section.productView-images > figure.productView-image, section.productView-images > figure.productView-image > a > img {
         max-height: none;
+    }
+    #product-listing-container .actionBar{
+        width:100%;
+        display:inline-block;
+    }
+    .actionBar-section {
+        float: right;
+    }
+    .category-page #product-listing-container .actionBar {
+        float: left;
+        width: auto;
     }
 
 
