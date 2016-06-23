@@ -179,6 +179,39 @@ export default class Product extends PageManager {
         }
         hijackBrandsLink();
 
+        $(".productView-info-name.product-type").text("Product Type:");
+
+        function formatCustomFields(){
+          $("span.product-type").each(function(index){
+            $(this).addClass("type-" + index);
+          })
+          $("span.concern").each(function(index){
+            $(this).addClass("type-" + index);
+          })
+          $("span.spf").each(function(index){
+            $(this).addClass("type-" + index);
+          })
+          $("span.gender").each(function(index){
+            $(this).addClass("type-" + index);
+          })
+          $("span.hair-type").each(function(index){
+            $(this).addClass("type-" + index);
+          })
+          $("span.gift-idea").each(function(index){
+            $(this).addClass("type-" + index);
+          })
+          $("span.skin-type").each(function(index){
+            $(this).addClass("type-" + index);
+          })
+          $("span.collection").each(function(index){
+            $(this).addClass("type-" + index);
+          })
+          $("span.preferences").each(function(index){
+            $(this).addClass("type-" + index);
+          })
+        }
+        formatCustomFields();
+
 
 
         next();

@@ -673,34 +673,15 @@ body {
         font-weight: 400;
         text-transform: capitalize !important;
     }
-
-
-
-
-
-
-
-
+    div.banner-container > .banner {
+        display:none;
+    }
 
 
 
 
     
 }
-
-
-
-@media only screen and (min-width: 442px) {
-
-    .mobile-band > div.banner > p{
-        height: auto;
-    }
-    .header{
-        height: 141px;
-    }
-
-}
-
 
 
 
@@ -730,10 +711,21 @@ body {
     }
 
 
+}
 
 
+@media only screen and (min-width: 532px) {
+
+    .mobile-band > div.banner > p{
+        height: auto;
+    }
+    .header{
+        height: 141px;
+    }
 
 }
+
+
 @media only screen and (min-width: 768px) {
 
     .desk-nav{
@@ -746,7 +738,7 @@ body {
         display:block;
     }
     .mobile-band{
-        display:none;
+        font-size:14px;
     }
     .mobile-nav{
         display:none;
@@ -783,8 +775,8 @@ body {
         margin-bottom: 0px;
         position: absolute;
         top: -1px;
-        right: 0px;
-        text-align: right;
+        right: 30%;
+        text-align: center;
     }
     .top-head > li {
         display: inline-block;
@@ -970,11 +962,6 @@ body {
     .icon.navPages-action-moreIcon {
         display: none;
     }
-    div.banner-container > .banner {
-        width: 60% !important;
-        text-align: left !important;
-        float: left;
-    }
     .banner-container {
         position:relative;
     }
@@ -1072,6 +1059,41 @@ body {
         z-index: 1000;
         max-width: 100%;
     }
+    .desk-nav li.navPages-item:hover > div.mega-menu > ul:last-child {
+        position: relative !important;
+        height: 100%;
+    }
+    .navPage-subMenu-item.all-btn {
+        position: absolute !important;
+        bottom: -120px;
+    }
+    .hair .navPage-subMenu-item.all-btn {
+        bottom: -55px;
+    }
+    .navPage-subMenu-item.all-btn > a {
+        text-transform: uppercase;
+        padding: 7px 10px;
+        border: 1px solid #000;
+        width: 150px;
+        text-align: center;
+        font-weight: 700 !important;
+    }
+    .navPage-subMenu-item.all-btn:hover > a{
+        background:#000;
+        color:#fff;
+    }
+    .hair .navPage-subMenu-item.all-btn {
+        bottom: -55px;
+    }
+    .for-men .navPage-subMenu-item.all-btn {
+        bottom: -55px;
+    }
+    .fragrances .navPage-subMenu-item.all-btn {
+        bottom: -25px;
+    }
+    .brands .navPage-subMenu-item.all-btn {
+        bottom: -10px;
+    }
 
 
 
@@ -1091,6 +1113,30 @@ body {
     }
     .navPages-action {
         padding: 10px 25px;
+    }
+
+}
+
+@media only screen and (min-width: 900px) {
+
+    div.banner-container > .banner {
+        display:block;
+        width: 60% !important;
+        text-align: left !important;
+        float: left;
+    }
+    .top-head.cf {
+        right: 20px;
+        text-align: right;
+    }
+    .mobile-band {
+        display: none;
+    }
+    .banner-container > .banner > p > a {
+        text-decoration: none;
+    }
+    .banner-container > .banner > p {
+        margin-top: 1px;
     }
 
 }

@@ -208,8 +208,10 @@
                 <span class="product-accordion-content">
                     <ul>
                     {{#each product.custom_fields}}
-                        <li class="productView-info-name {{name}}">{{name}}:</li>
-                        <li class="productView-info-value {{{value}}}">{{{value}}}</li>
+                        <span class="{{name}}">
+                            <li class="productView-info-name {{name}}">{{name}}:</li>
+                            <li class="productView-info-value {{{value}}}">{{{value}}}</li>
+                        </span>
                     {{/each}}
                     </ul>
                 </span>

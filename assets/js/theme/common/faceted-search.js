@@ -440,7 +440,7 @@ class FacetedSearch {
     onStateChange() {
         this.updateView();
 
-        console.log('state changed')
+        console.log('state changed');
         
     }
 

@@ -121,7 +121,11 @@ h1, h2, h3, h4, h5, h6{
         margin: 0 auto;
     }
     .mobile-slider .slick-slide{
-        padding-bottom:16.4%;
+        // padding-bottom:16.4%;
+    }
+    .mobile-slider .slick-slide > a {
+        padding-bottom: 83%;
+        display: block;
     }
     .slick-slide{
         background:no-repeat;
@@ -1139,8 +1143,9 @@ h1, h2, h3, h4, h5, h6{
         max-width: 100%;
         display: block;
         margin: 0 auto;
-        width: 210px;
+        width: 240px;
         padding: 0px;
+        padding-bottom:10px;
     }
     .olapic-text .show-us {
         font-family:$font-family;
@@ -1594,7 +1599,8 @@ h1, h2, h3, h4, h5, h6{
         display:none;
     }
     .mobile-cat-banners > div{
-        margin-bottom:20px;
+        max-width: 580px;
+        margin: 0px auto 20px auto;
     }
     #faceted-search-container .actionBar-section .form-field{
         position:relative;
@@ -1875,7 +1881,7 @@ h1, h2, h3, h4, h5, h6{
         bottom: -40px;
     }
     .olapic-text {
-        margin-top: 80px;
+        margin-top: 70px;
         letter-spacing: 1px;
     }
     .olapic-wrap {
@@ -2213,7 +2219,52 @@ h1, h2, h3, h4, h5, h6{
     .facet-quick-heading, .navList.facetedSearch-optionColumns * {
         font-family: $font-family !important;
     }
- 
+    .mobile-band .banner p a{
+        color:#fff;
+        text-decoration: none;
+    }
+    span.product-accordion-content > ul span.product.title{
+        display: none;
+    }
+    .product-type > li.product-type {
+        display: none;
+    }
+    .type-0 > li.productView-info-name{
+        display:inline-block !important;
+        font-weight:700 !important;
+    }
+    .concern > li.concern {
+        display: none;
+    }
+    .productView-info-name.spf {
+        text-transform: uppercase;
+    }
+    .product-details-accordion .productView-info-value:before {
+        content: ",";
+    }
+    span.concern:last-of-type > li.concern:after{
+        content:"";
+    }
+    .type-0::before {
+        clear: both;
+        content: "";
+        display: block;
+    }
+    .type-0 > li.productView-info-value:before{
+        content:"";
+    }
+    .product-details-accordion .productView-info-value::before {
+        content: ",";
+        position: relative;
+        left: -3px;
+    }
+    .SpaServices table, .SpaServices blockquote, .SpaServices blockquote p {
+        font-size: 14px !important;
+    }
+    div[data-cart-totals], div.cart-actions, div.cart-additionalCheckoutButtons {
+        padding: 0px 10px;
+    }
+
 
 
     
@@ -2345,6 +2396,16 @@ h1, h2, h3, h4, h5, h6{
     .olapic .olapic-nav-button {
         width: 50px !important;
     }
+    .cart-item-info + .cart-item-info {
+        margin-top: 0;
+        padding: 9px 0px;
+    }
+    .cart-item-quantity .form-increment{
+        margin-left:0px;
+    }
+    .cart-list{
+        padding:0px 5px;
+    }
 
 
 
@@ -2408,8 +2469,12 @@ h1, h2, h3, h4, h5, h6{
     .slick-slide{
         background:no-repeat;
     }
-    .desktop-slider .slick-slide{
-        padding-bottom:10%;
+    // .desktop-slider .slick-slide{
+    //     padding-bottom:10%;
+    // }
+    .desktop-slider .slick-slide > a{
+        padding-bottom:50%;
+        display:block;
     }
     .slick-prev, .slick-next{
         display:block !important;
@@ -2791,9 +2856,9 @@ h1, h2, h3, h4, h5, h6{
         display: block;
     }
     .olapic-text > img {
-        float: right;
+        float: none;
         padding: 0px;
-        width: 300px;
+        width: 250px;
     }
     .olapic-text .show-us {
         display: block;
@@ -2962,11 +3027,11 @@ h1, h2, h3, h4, h5, h6{
         left:0px;
     }
     .cat-img {
-        display:block;
+        display: inline-block;
         width: 120px;
         float: left;
-        margin-right: 15px;
-        margin-bottom:10px;
+        margin-left: 20px;
+        margin-top: -20px;
     }
     .landing-page-area > ul, .landing-page-area > h5{
         display:block;
@@ -3061,9 +3126,10 @@ h1, h2, h3, h4, h5, h6{
 
 
 
+
     // FROM DIZTINCT CSS
     .home .body {
-        margin-top: 7px !important;
+        margin-top: 46px !important;
     }
     .header-logo {
         margin-top: 31px;
@@ -3080,7 +3146,8 @@ h1, h2, h3, h4, h5, h6{
     .home .olapic-footer-button a {
         padding: 10px 20px 6px;
     }
-    .olapic-wrap {
+    .home .olapic-wrap {
+        padding-top:30px;
         padding-bottom: 50px;
     }
     .olapic-text .olapic-bb {
@@ -3223,6 +3290,9 @@ h1, h2, h3, h4, h5, h6{
 
 
 
+    .mobile-band {
+        padding: 10px 20px 13px;
+    }
     .related-products .card-title {
         font-size: 16px;
         line-height: 18px;
@@ -3278,6 +3348,14 @@ h1, h2, h3, h4, h5, h6{
         float: left;
         width: auto;
     }
+    .zoomImg {
+        display: block !important;
+    }
+    .cart-pg .page-content {
+        padding: 0px 10px;
+    }
+
+
 
 
 
@@ -3300,6 +3378,13 @@ h1, h2, h3, h4, h5, h6{
 
 }
 
+@media only screen and (min-width: 900px) {
+    
+    .home .body {
+        margin-top: 7px !important;
+    }
+
+}
 
 @media only screen and (min-width: 992px) {
 
@@ -3478,6 +3563,9 @@ h1, h2, h3, h4, h5, h6{
     .olapic-text .olapic-bb {
         padding-top: 0px;
         margin-top:20px;
+    }
+    .productView .productView-details > div > h1.productView-title.ProductPageHeading {
+        line-height: 34px;
     }
 
 
