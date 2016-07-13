@@ -252,13 +252,15 @@
 
 <script>
 
+    var slug = window.location.pathname;
+
     dataLayer = [{
       'pageType': 'product',
       'productId': '{{product.id}}',
       'pageTitle': '{{product.title}}',
       'imageUrl': '{{getImage product.main_image 'gallery'}}',
       'price': '{{product.price.without_tax.value}}',
-      'slug': '{{product.url}}',
+      'slug': slug,
       'brandName': '{{product.brand.name}}'
     }];
     console.log(dataLayer);

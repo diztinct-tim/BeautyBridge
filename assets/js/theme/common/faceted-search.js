@@ -103,6 +103,7 @@ class FacetedSearch {
 
     // Public methods
     refreshView(content) {
+        // console.log(content);
         if (content) {
             this.callback(content);
         }
@@ -119,11 +120,6 @@ class FacetedSearch {
 
         // Bind events
         this.bindEvents();
-
-        // var pageLength = $(".bottom-pagination ul li").length;
-        // var currentPage = $(".pagination-item.pagination-item--current").data().pageNum;
-        // this.mobilefyPagination(pageLength, currentPage);
-        // this.checkIfFirstPage();
 
         if($(".pagination-list li").length > 0){
             var pageLength = $(".bottom-pagination ul li").length;
@@ -407,6 +403,8 @@ class FacetedSearch {
         event.preventDefault();
 
         $link.toggleClass('is-selected');
+
+        console.log("onFacetClick");
 
         // Update URL
         urlUtils.goToUrl(url);

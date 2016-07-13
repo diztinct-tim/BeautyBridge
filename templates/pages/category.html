@@ -89,11 +89,13 @@ category:
 
         <script>
 
+            var slug = window.location.pathname;
+
             dataLayer = [{
               'pageType': 'category',
               'categoryId': '{{category.id}}',
               'pageTitle': '{{category.name}}',
-              'slug': '{{category.url}}'
+              'slug': slug
             }];
             console.log(dataLayer);
             

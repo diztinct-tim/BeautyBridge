@@ -11,11 +11,8 @@
                         href="{{ url }}"
                         class="facetLabel"
                         data-faceted-search-facet>
-                        {{#if facet '===' 'rating'}}
-                            {{lang 'search.faceted.selected.rating-label' rating=title}}
-                        {{else}}
+                        
                             {{ title }}
-                        {{/if}}
 
                         <svg class="icon">
                             <use xlink:href="#icon-close" />
@@ -26,9 +23,8 @@
         </ul>
         <a href="{{ remove_all_url }}" data-faceted-search-facet>Clear</a>
     </div>
-    {{else}}
-        <!-- {{lang 'search.faceted.selected.no-filters'}} -->
     {{/if}}
+    
 
     {{#if remove_all_url}}
         <!-- <a href="{{ remove_all_url }}" data-faceted-search-facet>Clear</a> -->

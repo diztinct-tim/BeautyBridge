@@ -769,13 +769,13 @@ body {
     }
     .top-head.cf {
         display:block;
-        width: 40%;
+        width: 60%;
         float: right;
         margin-left: 0px;
         margin-bottom: 0px;
         position: absolute;
         top: -1px;
-        right: 30%;
+        right: 20%;
         text-align: center;
     }
     .top-head > li {
@@ -1119,13 +1119,20 @@ body {
 
 @media only screen and (min-width: 900px) {
 
+
+
+}
+
+@media only screen and (min-width: 950px) {
+
     div.banner-container > .banner {
         display:block;
-        width: 60% !important;
+        width: 55% !important;
         text-align: left !important;
         float: left;
     }
     .top-head.cf {
+        width:42% !important;
         right: 20px;
         text-align: right;
     }
@@ -1137,6 +1144,9 @@ body {
     }
     .banner-container > .banner > p {
         margin-top: 1px;
+    }
+    .top-head > li {
+        margin: 0px 11px;
     }
 
 }

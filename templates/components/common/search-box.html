@@ -6,13 +6,15 @@
             <label class="form-label u-hiddenVisually" for="search_query_adv">{{lang 'search.results.form_label'}}</label>
             <div class="form-prefixPostfix">
                 <input class="form-input" type="text" autocomplete="off" id="search_query_adv" name="q" value="{{forms.search.query}}" placeholder="Search">
-                <input class="button button--primary form-prefixPostfix-button--postfix" type="submit" value="{{lang 'search.results.form_button_text'}}">
+                <input id="search_button" class="button button--primary form-prefixPostfix-button--postfix" type="submit" value="{{lang 'search.results.form_button_text'}}">
             </div>
         </div>
     </fieldset>
 </form>
 <script language="javascript">
-    CelebrosAutoCompleteV3("BeuBridge", "search_query_adv", onSelect, "BeuBridge-ac.celebros.com", "BeuBridge-ac.celebros.com", {acShowType: "regular",btnSearch:"search_button"});
+    // CelebrosAutoCompleteV3("BeuBridge", "search_query_adv", onSelect, "BeuBridge-ac.celebros.com", "BeuBridge-ac.celebros.com", {acShowType: "regular",btnSearch:"search_button"});
+
+    CelebrosAutoCompleteV3("BeautyBrdg ", "search_query_adv", onSelect, " BeautyBrdg -ac.celebros.com", "BeautyBrdg-ac.celebros.com", {acShowType: "regular",btnSearch:"search_button"});
     
     function onSelect(aParameter)
     { 

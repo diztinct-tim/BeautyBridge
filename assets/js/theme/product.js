@@ -173,8 +173,8 @@ export default class Product extends PageManager {
         formatProductTitle();
 
         function hijackBrandsLink(){
-          var brandName = $(".productView-brand > a > span").text().replace(" ","-");
-          var formattedBrandName = '/brands/' + brandName;
+          var brandName = $(".productView-brand > a > span").text().replace(" ","-").toLowerCase();
+          var formattedBrandName = '/brands/' + brandName + '/';
           $(".productView-brand > a").attr("href", formattedBrandName);
         }
         hijackBrandsLink();

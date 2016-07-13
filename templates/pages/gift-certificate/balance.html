@@ -4,7 +4,8 @@
 <h1 class="page-heading">{{lang 'gift_certificate.heading' }}</h1>
 {{> components/gift-certificate/navigation gift_page='balance'}}
 
-<main class="account account--fixed">
+<main class="account account--fixed info-page cf">
+<div class="page-content page-content--centered">
     <h3>{{lang 'gift_certificate.balance.heading'}}</h3>
     <p>
         <strong>{{lang 'gift_certificate.balance.intro' }}</strong>
@@ -31,6 +32,7 @@
             </div>
         </div>
     </form>
+</div>
 </main>
 {{/partial}}
 {{> layout/base}}
